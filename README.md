@@ -7,4 +7,4 @@ Sitios de referencia utilizados y el porque de nuestra elección:
 2-Amazon: Por el prestigio de la misma, porque nos gustó la paleta de colores del sitio, y su disposicion de productos en la pantalla.
 3-Olx: De esta web nos gustó en particular su selector de categoria. Nos parece comodo y fácil de encontrar para el usuario.
 4-eBay: Nos pareció interesante tanto su iconografía, como el banner grafico en la pagina de inicio donde te muestra cosas que podrian interesarte o en oferta.
-5-
+5-Sicame: La elegimos por que tiene un diseño que nos parece profesional y venden productos del mismo nicho.
