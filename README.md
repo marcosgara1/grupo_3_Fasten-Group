@@ -1,4 +1,4 @@
-# grupo_3_Fasten-Group
+# grupo_3_Marquentin
 El sitio web ofrecerá la posibilidad de comprar una serie de productos y materiales para transporte y distribución de energía eléctrica de baja, media y alta tensión. 
 El público objetivo serán empresas, grandes o pequeñas, con interés en nuestros productos.
 
