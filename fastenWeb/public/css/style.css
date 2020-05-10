@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
+
+/*style header */
+header {
+  margin: 20px auto;
+  padding: 0 20px;
+  border-bottom: 1.5px solid rgb(18, 63, 89);
+}
+
+header div.arriba {
+  display: grid;
+  grid-template-columns: 1.5fr 2.5fr;
+  gap: 10px;
+}
+
+header div.arriba .logo img {
+  width: 100%;
+}
+
+header div.arriba div.derecha {
+  margin-top: 0px;
+}
+
+header div.arriba div.derecha ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+  padding: 0 15px; 
+}
+
+header div.arriba div.derecha div.iconos ul {
+  margin: 0;
+  margin-left: 30px;
+  color: rgb(18, 63, 89);
+  font-family: 'Montserrat' sans-serif;
+  font-weight: normal;
+}
+
+header div.arriba div.derecha div.nav-inicio ul {
+  margin: 0;
+  margin-left: 30px;
+  color: rgb(18, 63, 89);
+  font-family: 'Montserrat' sans-serif;
+  font-weight: normal;
+}
+
+header div.arriba div.derecha div.nav-inicio ul li {
+  margin: 0 5px;
+}
+
+header div.abajo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+header div.abajo div.dropdown .btn {
+  background-color: rgb(18, 63, 89);
+
+}
+
+.navbar-light .navbar-brand {
+  color: #123F59;
+}
+
+.navbar {
+  font-family: 'Montserrat';
+}
+
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: #123F59;
+}
+
+.form-inline{
+  justify-content: flex-end;
+  flex-flow: row nowrap;
+}
+
+.btn-outline-success {
+  color: rgb(18, 63, 89);
+  border-color: rgb(18, 63, 89);
+}
+
+/*style footer*/
+
+footer div.contenedor-abajo {
+  background-color: rgb(18, 63, 89);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer div.contenedor-abajo div.datos {
+  text-align: center;
+  border-bottom: 0.5px solid white;
+  width: 100%;
+}
+
+footer div.contenedor-abajo div.datos h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+footer div.contenedor-abajo div.datos p {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+footer div.contenedor-abajo div.contacto{
+  border-bottom: 0.5px solid white;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+footer div.contenedor-abajo div.contacto p{
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 2px auto;
+}
+
+footer div.contenedor-abajo div.redes {
+  font-size: 25px;
+}
+
+
+
+@media (min-width: 426px) {
+  /*style header*/
+  header div.arriba .logo img {
+      width: 80%;
+  }
+  header div.arriba {
+      display: grid;
+      grid-template-columns: 3fr 3fr;
+      gap: 20px;
+  }
+
+  header div.arriba div.derecha {
+      margin-top: 5px;
+  }
+
+  header div.arriba div.derecha div.iconos ul {
+     font-size: 30px;
+  }
+
+  header div.abajo {
+      display: grid;
+      grid-template-columns: 6fr 1fr;
+  }
+
+  form.form-inline{
+      flex-flow: row nowrap;
+      width: 100%;
+  }
+
+  /*style footer*/
+  footer div.contenedor-abajo {
+    display: grid;
+    grid-template-columns: 2fr 6fr 1fr;
+}
+
+footer div.contenedor-abajo div.datos {
+    border-bottom: hidden;
+    text-align: left;
+    border-right: 1px solid white;
+}
+
+footer div.contenedor-abajo div.contacto {
+    border-bottom: hidden;
+    text-align: left;
+    margin-left: 50px;
+}
+
+footer div.contenedor-abajo div.contacto p{
+    text-align: left;
+}
+
+footer div.contenedor-abajo div.redes i {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+/*style carga de producto*/
+
+div.productAdd {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 20px auto;
+  padding: 0 20px;
+
+}
+
+div.productAdd div {
+  margin: 20px 0;
+}
+
+div.productAdd form div input {
+  border-bottom: 1px solid rgb(71, 176, 278);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 10px;
+}
+
+.btn-primary {
+  background-color: rgb(18, 63, 89);
+  border-color: rgb(18, 63, 89);
+}
+
+}
+
+@media (min-width: 769px) {
+  /*style header*/
+  header div.arriba {
+      margin-bottom: 10px;
+  }
+
+  /*style footer*/
+  footer div.contenedor-abajo {
+    display: grid;
+    grid-template-columns: 2fr 6fr 1fr;
+}
+
+footer div.contenedor-abajo div.datos {
+    border-bottom: hidden;
+    text-align: left;
+    border-right: 1px solid white;
+}
+
+footer div.contenedor-abajo div.contacto {
+    border-bottom: hidden;
+    text-align: left;
+    margin-left: 50px;
+}
+
+footer div.contenedor-abajo div.contacto p{
+    text-align: left;
+}
+
+footer div.contenedor-abajo div.redes i {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 30px;
+}
+}
