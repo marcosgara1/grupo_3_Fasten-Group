@@ -9,6 +9,10 @@ body {
   max-width: 1180px;
 }
 
+a { 
+  text-decoration: none;
+}
+
 
 /*style header */
 header {
@@ -159,8 +163,11 @@ div.registerForm form div input {
   font-weight: 300;
   font-style: italic;
   font-size: 10px;
+  text-align: center;
   margin: 20px auto;
+  width: 50%;
 }
+
 
 .btn-primary {
   background-color: rgb(18, 63, 89);
@@ -199,7 +206,9 @@ div.productAdd form div input {
 .btn-primary {
   background-color: rgb(18, 63, 89);
   border-color: rgb(18, 63, 89);
+  margin-bottom: 20px;
 }
+
 
 /*media querys tablets */
 
@@ -264,16 +273,9 @@ div.productAdd form div input {
   }
   
   /*style registro de usuario*/
-  div.registerForm {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px auto;
-    padding: 0 20px;
-    text-align: center;
-    width: 100%;
+  div.registerForm form div input {
+   font-size: 15px;
+   width: 50%;
   }
   
 }
@@ -315,14 +317,6 @@ div.productAdd form div input {
     align-items: center;
     margin-top: 10px;
     font-size: 30px;
-  }
-  
-  /*style registro de usuario*/
-  .registerForm {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
   }
   
 }
