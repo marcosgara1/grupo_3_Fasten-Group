@@ -3,6 +3,7 @@
 }
 
 body {
+  background-color: #eeeeee ;
   list-style-type: none;
   text-decoration: none;
   margin: 0 auto;
@@ -27,8 +28,8 @@ header div.arriba {
   gap: 10px;
 }
 
-header div.arriba .logo img {
-  width: 100%;
+.logo img {
+  width: 90%;
 }
 
 header div.arriba div.derecha {
@@ -46,7 +47,6 @@ header div.arriba div.derecha ul {
 
 header div.arriba div.derecha div.iconos ul {
   margin: 0;
-  margin-left: 30px;
   color: rgb(18, 63, 89);
   font-family: 'Montserrat' sans-serif;
   font-weight: normal;
@@ -54,7 +54,6 @@ header div.arriba div.derecha div.iconos ul {
 
 header div.arriba div.derecha div.nav-inicio ul {
   margin: 0;
-  margin-left: 30px;
   color: rgb(18, 63, 89);
   font-family: 'Montserrat' sans-serif;
   font-weight: normal;
@@ -78,6 +77,11 @@ header div.abajo div.dropdown .btn {
 
 .navbar-light .navbar-brand {
   color: #123F59;
+  background-color: #eeeeee;
+}
+
+.navbar-toggler:hoover {
+  color: #5b79ff;
 }
 
 .navbar {
@@ -146,6 +150,39 @@ footer div.contenedor-abajo div.redes {
   font-size: 25px;
 }
 
+/*home*/
+.banner {
+  display: none;
+}
+
+section.destacado{
+  display: none;
+  }
+  
+  .productos{
+      display: flex;
+      width: 100%;
+      padding: 15px;
+      border: none;
+      margin: 5px;
+      box-sizing: border-box;
+      font-size: 1rem;
+      text-decoration: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: left;
+  }
+  
+  .photo {
+      width: 95%;
+      justify-content: center;
+  }
+
+  .p {
+    text-align: left;
+  }
+
+
 /*style registro de usuario*/
 div.registerForm {
   margin: 20px auto;
@@ -175,39 +212,80 @@ div.registerForm form div input {
   margin-top: 20px;
 }
 
+/*formulario de registro de producto*/
+  .body {
+    margin: auto;
+    justify-content: center;
 
-/*style carga de producto*/
-
-div.productAdd {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  margin: 20px auto;
-  padding: 0 20px;
+  }
+  .publicar {
+      background-color: grey;
+      text-decoration: black;
+      width: 180px;
+      height: 40px;
+  }
+  .publicar:hover {
+      background-color: #5b79ff;
+      text-decoration: blanchedalmond;
+  }
   
-}
+  form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+      padding: auto;
+  }
+  
+  .formulario {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      border: none;
+      margin-bottom: 5px;
+      box-sizing: border-box;
+      font-size: 1rem;
+      text-align: center;
+      text-decoration: none;
+      margin: auto;
+  }
+  
+  select{
+      width: 150px;
+      height: 30px;
+  }
+  
+  @media (min-width:768px) {
+      .productos{
+          display: flex;
+          flex-direction: row;
+      }
+  
+      .product {
+          width: 33%;
+      }
 
-div.productAdd div {
-  margin: 20px 0;
-}
+      header.arriba.logo.img {
+        width: 90%;
+      }
+  }
+  
+  @media (min-width:1024px) {
+      .productos{
+          display: flex;
+          flex-direction: row;
+      }
+  
+      .product {
+          width: 25%;
+      }
 
-div.productAdd form div input {
-  border-bottom: 1px solid rgb(71, 176, 278);
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  font-style: italic;
-  font-size: 10px;
-}
+      header.arriba.logo.img {
+        width: 60%;
+      }
+  }
 
-.btn-primary {
-  background-color: rgb(18, 63, 89);
-  border-color: rgb(18, 63, 89);
-  margin-bottom: 20px;
-}
+
 
 
 /*media querys tablets */
@@ -215,7 +293,6 @@ div.productAdd form div input {
 @media (min-width: 426px) {
   /*style header*/
   header div.arriba .logo img {
-    width: 80%;
   }
   header div.arriba {
     display: grid;
@@ -271,12 +348,7 @@ div.productAdd form div input {
     margin-top: 10px;
     font-size: 30px;
   }
-  
-  /*style registro de usuario*/
-  div.registerForm form div input {
-   font-size: 15px;
-   width: 50%;
-  }
+
   
 }
 

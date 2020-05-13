@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #eeeeee ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.banner2 {
+    display: none;
+}
+
+
+section.destacado{
+display: none;
+}
+
+.productos{
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    margin: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    text-decoration: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.products{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    margin: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    text-align: left;
+    text-decoration: none;
+}
+
+.photo {
+    width: 50%;
+}
+
+.banner{
+    display: none;
+}
+
+.publicar {
+    background-color: grey;
+    text-decoration: black;
+    width: 180px;
+    height: 40px;
+}
+.publicar:hover {
+    background-color: #5b79ff;
+    text-decoration: blanchedalmond;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+p{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+select{
+    width: 150px;
+    height: 30px;
+}
+
+@media (min-width:768px) {
+    .productos{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .product {
+        width: 33%;
+    }
+}
+
+@media (min-width:1024px) {
+    .productos{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .product {
+        width: 25%;
+    }
+}

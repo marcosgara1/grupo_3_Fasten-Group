@@ -11,50 +11,52 @@
 <body>
     <%- include('./partials/header') %>
     <div class="productAdd">
-        <form action="" method="POST">
-            <div>
-                <input type="text" required id="producto" name="producto" placeholder="Nombre del producto">
-            </div>
-            <div>
-                <input type="text" required id="categoria" name="categoria" placeholder="Categoría">
-            </div>
-            <div>
-                <input type="text" required id="precio" name="precio" placeholder="Precio ">
-            </div>
-            <div>
-                <input type="text" required id="stcok" name="stcok" placeholder="Stcok">
-            </div>
-            <div>
-                <input type="text" required id="codigo" name="codigo" placeholder="Código">
-            </div>
-            <div>
-                <input type="text" required id="descripcion" name="descripcion" placeholder="Descripción">
-            </div>
-            <div>
-                <textarea name="descripcion" required id="descripcion" placeholder="Descripción" cols="23" rows="10"></textarea>
-            </div>
-            <div>
-                <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
-                    Registrar producto
-                  </button>
-            </div>
+
+        <form action=validar.php method="POST">
+            <p>
+               <label for="nombre">Nombre:</label>
+               <input type="nombre" name="nombre del producto">
+            </p>
+        
+            <p>
+                <label for="nomenclatura">Modelo:</label>
+                <input type="nomenclatura" name="nomenclatura del modelo">
+            </p>
+        
+            <p>
+                <label for="precio">Precio:</label>
+                <input type="precio" name="precio">
+            </p>
+        
+            <p>
+                <label for="descuento">¿Tiene descuento?</label>
+                <input type="radio" name="tiene" value="sí">
+                <input type="radio" name="tiene" value="no">
+            </p>
+        
+            
+            <p>
+                <label for="Clasificación">Clasificación</label>
+                <select name="familia">
+                    <option value="TcT">Trabajos con tensión</option>
+                    <option value="Seg">Seguridad</option>
+                    <option value="ATM">Aparatos de testeo y medición</option>
+                </select>
+            </p>
+        
+            <p>
+                <label for="Descripción">Descripción</label>
+                <textarea name="mensaje"></textarea>    
+            </p>
+        
+            <p>
+                <button type="submit" class="publicar">Publicar</button>
+            </p>
             
         </form>
-        
-        <div class="foto">
-            <h2>Acá se cargan las fotos, pero no sé cómo se hace : )</h2>
-        </div>
     
     </div>
-    
-    
-    
-    
 <%- include('./partials/footer') %>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
 </body>
 </html>
