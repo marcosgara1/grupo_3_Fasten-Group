@@ -52,6 +52,16 @@ header div.arriba div.derecha div.iconos ul {
   font-weight: normal;
 }
 
+header div.arriba div.derecha div.iconos-cliente {
+  margin: 0;
+  color: rgb(18, 63, 89);
+  font-family: 'Montserrat' sans-serif;
+  font-weight: normal;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 header div.arriba div.derecha div.nav-inicio ul {
   margin: 0;
   color: rgb(18, 63, 89);
