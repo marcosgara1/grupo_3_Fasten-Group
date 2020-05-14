@@ -12,46 +12,45 @@
     <%- include('./partials/header') %>
     <div class="productAdd">
 
-        <form action=validar.php method="POST">
-            <p>
-               <label for="nombre">Nombre:</label>
-               <input type="nombre" name="nombre del producto">
-            </p>
+        <form action="" method="POST" enctype="multipart/form-data">
+            <div>
+               <input type="nombre" name="nombre del producto" placeholder="Nombre">
+            </div>
         
-            <p>
-                <label for="nomenclatura">Modelo:</label>
-                <input type="nomenclatura" name="nomenclatura del modelo">
-            </p>
+            <div>
+                <input type="nomenclatura" name="nomenclatura del modelo" placeholder="Modelo">
+            </div>
         
-            <p>
-                <label for="precio">Precio:</label>
-                <input type="precio" name="precio">
-            </p>
+            <div>
+                <input type="precio" name="precio" placeholder="Precio">
+            </div>
         
-            <p>
+            <div class="descuento">
                 <label for="descuento">¿Tiene descuento?</label>
-                <input type="radio" name="tiene" value="sí">
-                <input type="radio" name="tiene" value="no">
-            </p>
+                <input type="radio" name="tiene" value="sí" class="descuento">
+            </div>
         
-            
-            <p>
+            <div>
                 <label for="Clasificación">Clasificación</label>
                 <select name="familia">
                     <option value="TcT">Trabajos con tensión</option>
                     <option value="Seg">Seguridad</option>
                     <option value="ATM">Aparatos de testeo y medición</option>
                 </select>
-            </p>
+            </div>
         
-            <p>
-                <label for="Descripción">Descripción</label>
-                <textarea name="mensaje"></textarea>    
-            </p>
+            <div>
+                <textarea name="mensaje" placeholder="Descripción"></textarea>    
+            </div>
+
+            <div>
+                <input type="file" name="foto">Agregar foto</button>
+            </div>
         
-            <p>
+            <div>
                 <button type="submit" class="publicar">Publicar</button>
-            </p>
+            </div>
+                       
             
         </form>
     
