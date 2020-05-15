@@ -11,6 +11,7 @@ var formularioRegistroRouter = require('./routes/formularioRegistro');
 var clientRouter = require('./routes/client');
 var productCartRouter = require('./routes/productCart');
 var loginRouter = require('./routes/formularioLogin');
+var detalleRouter = require('./routes/detalle');
 
 
 
@@ -33,6 +34,7 @@ app.use('/formularioLogin', loginRouter);
 app.use('/formularioRegistro', formularioRegistroRouter);
 app.use('/client', clientRouter);
 app.use('/productCart', productCartRouter);
+app.use('/detalle', detalleRouter);
 
 
 // catch 404 and forward to error handler
