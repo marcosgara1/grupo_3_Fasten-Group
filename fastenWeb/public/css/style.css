@@ -235,30 +235,41 @@ div.registerForm form div input {
   }
   
   form{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin: 0 auto;
-      padding: 0 auto;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: center;
+    width: 100%;
   }
   
-  div.productAdd form {
+  div input {
+    border-bottom: 1px solid #5b79ff;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 280;
+    font-style: italic;
+    font-size: 12px;
     text-align: center;
+    margin: 25px auto;
+    width: 50%;  
   }
 
-  .formulario {
-      display: block;
-      width: 100%;
-      padding: 15px;
-      border: none;
-      margin-bottom: 5px;
-      box-sizing: border-box;
-      font-size: 1rem;
-      text-align: center;
-      text-decoration: none;
-      margin: auto;
+  div.descuento {
+    flex-direction: row;
+    justify-content: center;
   }
-  
+
+  input.descuento {
+    margin: 0px;
+  }
+
+  div textarea {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+
   select{
       width: 150px;
       height: 30px;
