@@ -10,6 +10,8 @@ var productAddRouter = require('./routes/productAdd');
 var registerRouter = require('./routes/register');
 var clientRouter = require('./routes/client');
 var productCartRouter = require('./routes/productCart');
+var loginRouter = require('./routes/login');
+
 
 
 var app = express();
@@ -27,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/productAdd', productAddRouter);
+app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/client', clientRouter);
 app.use('/productCart', productCartRouter);
