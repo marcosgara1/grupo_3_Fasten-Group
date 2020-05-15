@@ -396,8 +396,8 @@ div.registerForm form div input {
 
 @media (min-width: 426px) {
   /*style header*/
-  header div.arriba .logo img {
-  }
+  /*header div.arriba .logo img {
+  }*/
   header div.arriba {
     display: grid;
     grid-template-columns: 3fr 3fr;
