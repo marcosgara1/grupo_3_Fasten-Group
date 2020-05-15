@@ -369,6 +369,67 @@ main div.registerForm p {
       margin-top: 30px;
     }
 
+    /*style detalle */
+    main div.fotos {
+      display: flex;
+      flex-direction: column;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    main div.fotos div.foto-grande img {
+      border: 1px solid rgb(18, 63, 89);
+      margin: 20px auto;
+    }
+
+    main div.fotos-chicas {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+
+    main div.fotos-chicas div.fotos-arriba {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
+    main div.fotos-chicas div.fotos-abajo {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    main div.fotos-chicas img {
+      width: 25%;
+      border: 1px solid rgb(18, 63, 89);
+    }
+
+    main div.detalle h3 {
+      font-family: 'Montserrat';
+      text-align: center;
+    }
+
+    main div.botones {
+      text-align: center;
+    }
+
+    main div.botones button {
+      margin: 20px 20px;
+    }
+
+    main div.producto-detalles {
+      text-align: center;
+      margin: 20px auto;
+      font-family: 'Montserrat';
+      padding: 0 20px;
+    }
+
+    main div.producto-detalles h4 {
+      background: #D7DEF7;
+      padding: 5px;
+    }
     
 
 
@@ -478,6 +539,48 @@ main div.registerForm p {
     justify-content: space-evenly;
     align-items: baseline;
   }
+
+  /*style detalle */
+
+  main div.fotos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+  }
+
+  main div.fotos div.foto-grande {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+
+  main div.fotos-chicas {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+  }
+
+  main div.fotos-chicas div.fotos-arriba {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main div.fotos-chicas div.fotos-abajo {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main div.fotos-chicas img {
+    width: 100%;
+    border: 1px solid rgb(18, 63, 89);
+    margin: 20px;
+  }
   
 }
 
@@ -519,5 +622,16 @@ main div.registerForm p {
     margin-top: 10px;
     font-size: 30px;
   }
+
+  /*style detalle */
+
+  main div.fotos-chicas img {
+    width: 60%;
+    border: 1px solid rgb(18, 63, 89);
+    
+  }
+
+  
+
   
 }

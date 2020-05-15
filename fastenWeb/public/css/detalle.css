@@ -4,13 +4,14 @@
     padding: 0;
     box-sizing: border-box;
     background-color: #F2F4F4;
-    
-   
 }
 
-.maincontainer{
-      width: 100%;
-    
+body {
+    font-family: "Montserrat";
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1180px;
+    padding: 0 20px;    
 }
 
 h1{
@@ -22,18 +23,50 @@ h1{
     margin: 0;
     margin-top: 30px;
     width: 800px;
-    text-align: center;
+    text-align: left;
     padding-bottom: 25px;
 }
 
-body {
-    font-family: "Montserrat";
-    text-align: center;
+section {
+    width: 100%;
     margin: 0 auto;
-    max-width: 1180px;
-  
-    
 }
+
+div.fotos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+div.fotos div.fotogrande {
+    width: 100%;
+}
+
+div.fotos div.fotoschicas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.precio {
+    font-size: 40px;
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center;
+    font-weight: bold;
+    color: cornflowerblue;
+}
+
+div.botones {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+
+
 
 .detalleprod{
     color: rgba(0,0,0,.8);
@@ -80,13 +113,12 @@ button {
     background-color: #1E62FF;
     border-radius: 22px;
     font-size: 35px;
-    width: 300px;
-    height: 80px;
+    width: 100%;
     margin-bottom: 35px;
 }
 
 div.descripcion {
-    width: 780px;
+    width: 100%
 
 }
 
@@ -99,25 +131,14 @@ div.descripcion {
     
 
 
-.precio {
-    font-size: 40px;
-    padding: 22px;
-    margin: 10px;
-    display: flex;
-    flex-direction: row;
-    width: 750px;
-    justify-content: center;
-    letter-spacing: 5px;
-    font-weight: bold;
-    color: cornflowerblue;
-}
+
 
 .botones {
     font-size: 40px;
     padding: 22px;
     display: flex;
     flex-direction: row;
-    width: 750px;
+    width: 100%;
     justify-content: center;
     letter-spacing: 5px;
     font-weight: bold;
@@ -147,12 +168,12 @@ div.texto3descripcion {
 h2 {
     width: 786;
     border: 3px solid;
-    width: 600px;
+    width: 100%;
     margin-bottom: 3px;
 }
 
 h3 {
-    width: 786;
+    width: 100%;
     border-left: 3px solid;
     border-right: 3px solid;
 }
@@ -164,13 +185,13 @@ div.fotogrande {
 .texto2descripcion p {
     background: #D6EAF8;
     border: 3px solid;
-    width: 786;
+    width: 100%;
 }
 
 .texto4descripcion p {
     background-color: #D6EAF8;
     border: 3px solid;
-    width: 786;
+    width: 100%;
 }
 
 @media (min-width:426px){
