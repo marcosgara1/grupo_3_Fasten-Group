@@ -2,7 +2,7 @@ const fs = require('fs');
 
 let controlador = {
     register: function(req, res){
-        res.render('register');
+        res.render('formularioRegistro');
     },
     registerUser: function(req, res){
         

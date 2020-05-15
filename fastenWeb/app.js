@@ -7,10 +7,10 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productAddRouter = require('./routes/productAdd');
-var registerRouter = require('./routes/register');
+var formularioRegistroRouter = require('./routes/formularioRegistro');
 var clientRouter = require('./routes/client');
 var productCartRouter = require('./routes/productCart');
-var loginRouter = require('./routes/login');
+var loginRouter = require('./routes/formularioLogin');
 
 
 
@@ -29,8 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/productAdd', productAddRouter);
-app.use('/login', loginRouter);
-app.use('/register', registerRouter);
+app.use('/formularioLogin', loginRouter);
+app.use('/formularioRegistro', formularioRegistroRouter);
 app.use('/client', clientRouter);
 app.use('/productCart', productCartRouter);
 

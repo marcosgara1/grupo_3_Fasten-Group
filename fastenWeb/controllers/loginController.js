@@ -1,6 +1,6 @@
 let controlador = {
     login: function(req, res){
-        res.render('login');
+        res.render('formularioLogin');
     }
 };
 

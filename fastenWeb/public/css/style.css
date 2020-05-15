@@ -219,6 +219,12 @@ div.registerForm form div input {
   margin-top: 20px;
 }
 
+main div.registerForm p {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  margin-top: 30px;
+}
+
 /*formulario de registro de producto*/
 /*  
 .body {
