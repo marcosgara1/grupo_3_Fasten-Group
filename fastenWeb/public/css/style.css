@@ -54,6 +54,7 @@ header div.arriba div.derecha div.iconos-cliente ul {
   color: rgb(18, 63, 89);
   font-family: 'Montserrat' sans-serif;
   font-weight: normal;
+  font-size: 30px;
 }
 
 li.fas.fa-home {
@@ -434,6 +435,31 @@ main div.registerForm p {
     main div.producto-detalles h4 {
       background: #D7DEF7;
       padding: 5px;
+    }
+
+    /*style listado de productos*/
+
+    div.list {
+      margin: 20px auto;
+      padding: 0px 20px;
+      }
+
+    div.list div.products h2 {
+      font-family: 'Montserrat', sans-serif;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    div.list div.products h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 100;
+      text-align: left;
+    }
+
+    div.list div.products .clasificacion {
+      border-bottom: 1px solid rgb(18, 63, 89);
+      margin-bottom: 25px;
+      padding-bottom: 20px;
     }
     
 

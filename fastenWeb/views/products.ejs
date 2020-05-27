@@ -1,0 +1,41 @@
+<%- include('./partials/head') %>
+
+<body>
+
+    <%- include('./partials/header') %>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <main>
+
+            <div class="list">
+                <div class="products">
+                <% for (let i = 0; i <productos.length; i++) { %>
+                         
+                       
+                    <p><%= productos[i].image%></p>
+                    <h2><%= productos[i].name %></h2>
+                    <h3><%= productos[i].price %></h3>
+                    <p>Descripción:</p>
+                    <p><%= productos[i].description%></p>
+                    <p class="clasificacion">Clasificación: <%= productos[i].clasificacion%></p>
+
+                <% } %>
+                
+                </div>
+
+
+            </div>
+
+        </main>
+
+        <%- include('./partials/footer') %>
+
+    </body>
+
+    </html>

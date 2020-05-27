@@ -12,7 +12,7 @@ var clientRouter = require('./routes/client');
 var productCartRouter = require('./routes/productCart');
 var loginRouter = require('./routes/formularioLogin');
 var detalleRouter = require('./routes/detalle');
-
+var productsRouter = require('./routes/products');
 
 
 var app = express();
@@ -29,12 +29,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/productAdd', productAddRouter);
 app.use('/formularioLogin', loginRouter);
 app.use('/formularioRegistro', formularioRegistroRouter);
 app.use('/client', clientRouter);
 app.use('/productCart', productCartRouter);
 app.use('/detalle', detalleRouter);
+app.use('/products', productsRouter);
 
 
 // catch 404 and forward to error handler

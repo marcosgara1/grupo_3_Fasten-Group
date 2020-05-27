@@ -1,0 +1,29 @@
+<%- include('./partials/head') %>
+
+<%- include('./partials/header') %>
+
+<body>
+
+
+    <main>
+        
+        <% for (let i = 0; i < detalleProducto.length; i++) { %>
+                         
+                       
+            <p><%= detalleProducto[i].image%></p>
+            <h2><%= detalleProducto[i].name %></h2>
+            <h3><%= detalleProducto[i].price %></h3>
+            <p>Descripción:</p>
+            <p><%= detalleProducto[i].description%></p>
+            <p class="clasificacion">Clasificación: <%= detalleProducto[i].clasificacion%></p>
+
+        <% } %>
+      
+
+    </main>
+
+    <%- include('./partials/footer') %>
+
+</body>
+
+</html>
