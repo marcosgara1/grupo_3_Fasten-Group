@@ -8,7 +8,7 @@ let controlador = {
         if (archivoProductos == '') {
             productos = [];
         } else {
-            productos = JSON.parse(archivoProductos);
+           productos = JSON.parse(archivoProductos);
         }
         
 
@@ -32,6 +32,7 @@ let controlador = {
             productos = JSON.parse(archivoProductos);
         }
 
+        console.log('archivoProductos');
         let detalleProducto = [];
         
         for (let i = 0; i < productos.length; i++){
@@ -42,7 +43,7 @@ let controlador = {
             }
         }
 
-        res.render('detalleProducto', { detalleProducto: detalleProducto} );
+        res.render('detalleProducto', { detalleProducto: detalleProducto } );
         
     },
 
