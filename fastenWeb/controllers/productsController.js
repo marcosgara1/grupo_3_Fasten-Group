@@ -32,18 +32,19 @@ let controlador = {
             productos = JSON.parse(archivoProductos);
         }
 
-        console.log('archivoProductos');
         let detalleProducto = [];
         
         for (let i = 0; i < productos.length; i++){
             if (productos[i].id == productId){
-                detalleProducto.push(productos[i]);  
+                detalleProducto.push(productos[i]);
             } else {
-                res.render('error');
+                res.send('ups, el producto no existe : (') //  <-- preguntar esto!
             }
-        }
 
-        res.render('detalleProducto', { detalleProducto: detalleProducto } );
+           
+        }
+        
+         res.render('detalleProducto', { detalleProducto: detalleProducto } );
         
     },
 
@@ -75,7 +76,9 @@ let controlador = {
         fs.writeFileSync('./data/products.json', productosJson);
 
         res.render('products', { productos: productos });
-    }
+    },
+
+    
     
 };
 

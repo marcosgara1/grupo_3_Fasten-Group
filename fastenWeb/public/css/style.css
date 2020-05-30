@@ -461,6 +461,11 @@ main div.registerForm p {
       margin-bottom: 25px;
       padding-bottom: 20px;
     }
+
+    div.list div.productos{
+      display: flex;
+      flex-direction: column;
+    }
     
 
 
@@ -612,6 +617,20 @@ main div.registerForm p {
     border: 1px solid rgb(18, 63, 89);
     margin: 20px;
   }
+
+  /*style list */
+
+  div.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  div.list div.productos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
   
 }
 
@@ -661,6 +680,20 @@ main div.registerForm p {
     border: 1px solid rgb(18, 63, 89);
     
   }
+
+    /*style list */
+
+    div.list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    div.list div.productos {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
 
   
 
