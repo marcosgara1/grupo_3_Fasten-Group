@@ -1,6 +1,20 @@
 const fs = require('fs');
 
 let controlador = {
+    index : (req, res) => {
+        console.log(req.query.busqueda);
+
+    let productoBuscado = [];
+
+    for (let i = 0; i < productos.length; i++){
+            if (productos[i].name == busqueda){
+                productoBuscado.push(productos[i]);
+            } else {
+                res.send('ups, el producto no existe : (') //  <-- preguntar esto!
+            }
+    }
+
+
     list: function (req, res) {
         
         let archivoProductos = fs.readFileSync('./data/products.json', { encoding: 'utf-8' });
