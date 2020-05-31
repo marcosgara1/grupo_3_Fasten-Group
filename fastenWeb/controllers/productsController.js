@@ -1,6 +1,7 @@
 const fs = require('fs');
-
+const productData = require('./../models/product');
 let controlador = {
+
     list: function (req, res) {
         
         let archivoProductos = fs.readFileSync('./data/products.json', { encoding: 'utf-8' });
@@ -11,7 +12,6 @@ let controlador = {
            productos = JSON.parse(archivoProductos);
         }
         
-
         res.render('products', { productos: productos });
         
     },
@@ -37,11 +37,10 @@ let controlador = {
         for (let i = 0; i < productos.length; i++){
             if (productos[i].id == productId){
                 detalleProducto.push(productos[i]);
-            } else {
+            }/* else {
                 res.send('ups, el producto no existe : (') //  <-- preguntar esto!
-            }
+            }*/
 
-           
         }
         
          res.render('detalleProducto', { detalleProducto: detalleProducto } );
@@ -49,6 +48,14 @@ let controlador = {
     },
 
     register: function (req,res) {
+       
+        let archivoProductos = fs.readFileSync('./data/products.json', { encoding: 'utf-8' });
+        let productos;
+        if (archivoProductos == '') {
+            productos = [];
+        } else {
+            productos = JSON.parse(archivoProductos);
+        }
         
         let producto = {
             name: req.body.nombre,
@@ -57,16 +64,6 @@ let controlador = {
             description: req.body.mensaje,
             descuento: req.body.tiene,
             clasificacion: req.body.clasificacion,
-        }
-
-        console.log(producto);
-
-        let archivoProductos = fs.readFileSync('./data/products.json', { encoding: 'utf-8' });
-        let productos;
-        if (archivoProductos == '') {
-            productos = [];
-        } else {
-            productos = JSON.parse(archivoProductos);
         }
 
         productos.push(producto);
