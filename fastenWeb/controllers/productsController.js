@@ -1,6 +1,19 @@
 const fs = require('fs');
-const productData = require('./../models/product');
 let controlador = {
+    index : function (req, res){
+        console.log(req.query.busqueda);
+
+    let productoBuscado = [];
+
+    for (let i = 0; i < productos.length; i++){
+            if (productos[i].name == busqueda){
+                productoBuscado.push(productos[i]);
+            } else {
+                res.send('ups, el producto no existe : (') //  <-- preguntar esto!
+            }
+    }
+    },
+
 
     list: function (req, res) {
         

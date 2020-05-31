@@ -102,7 +102,7 @@ header div.abajo div.dropdown .btn {
   color: #123F59;
 }
 
-.form-inline{
+.buscar{
   justify-content: flex-end;
   flex-flow: row nowrap;
 }
