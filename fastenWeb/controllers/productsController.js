@@ -1,8 +1,9 @@
 const fs = require('fs');
 let controlador = {
     index : function (req, res){
-        console.log(req.query.busqueda);
+        
 
+    let busqueda = req.query.busqueda;
     let productoBuscado = [];
 
     for (let i = 0; i < productos.length; i++){
@@ -12,6 +13,8 @@ let controlador = {
                 res.send('ups, el producto no existe : (') //  <-- preguntar esto!
             }
     }
+    
+        res.render('products', { productoBuscado : productoBuscado });
     },
 
 
@@ -88,6 +91,22 @@ let controlador = {
         res.render('products', { productos: productos });
     },
 
+    formEdit: function (req, res){
+        res.render('/:id/formularioEditar');
+    },
+
+    edit: function (req, res) {
+
+        let archivoProductos = fs.readFileSync('./data/products.json', { encoding: 'utf-8' });
+        let productos;
+        if (archivoProductos == '') {
+            productos = [];
+        } else {
+            productos = JSON.parse(archivoProductos);
+        }
+        
+        res.redirect('/products');
+    },
     
     
 };

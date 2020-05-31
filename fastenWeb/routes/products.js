@@ -7,8 +7,15 @@ router.get('/', productsController.list);
 
 router.get('/create', productsController.create);
 
+router.post('/create', productsController.register);
+
 router.get('/:id', productsController.detail);
 
-router.post('/create', productsController.register);
+router.get('/:id/formularioEditar', productsController.formEdit);
+
+router.put('/:id/formularioEditar', productsController.edit)
+
+
+
 
 module.exports = router;

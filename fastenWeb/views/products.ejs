@@ -15,23 +15,18 @@
 
             <div class="list">
 
-               
+                <% for (let i = 0; i <productos.length; i++) { %>
 
-                    <% for (let i = 0; i <productos.length; i++) { %>
+                <div class="productos">
 
-                    <div class="productos">
-
-                        <p><%= productos[i].image%></p>
-                        <h2><%= productos[i].name %></h2>
-                        <h3><%= productos[i].price %></h3>
-                        <p>Descripción:</p>
-                        <p><%= productos[i].description%></p>
-                        <p class="clasificacion">Clasificación: <%= productos[i].clasificacion%></p>
-                    </div>
-                    <% } %>
-
-                
-
+                    <p><%= productos[i].image%></p>
+                    <h2><%= productos[i].name %></h2>
+                    <h3><%= productos[i].price %></h3>
+                    <p>Descripción:</p>
+                    <p><%= productos[i].description%></p>
+                    <p class="clasificacion">Clasificación: <%= productos[i].clasificacion%></p>
+                </div>
+                <% } %>
 
             </div>
 
