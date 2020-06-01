@@ -92,7 +92,8 @@ let controlador = {
     },
 
     formEdit: function (req, res){
-        res.render('/:id/formularioEditar');
+        
+        res.render('edit');
     },
 
     edit: function (req, res) {

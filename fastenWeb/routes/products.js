@@ -11,9 +11,9 @@ router.post('/create', productsController.register);
 
 router.get('/:id', productsController.detail);
 
-router.get('/:id/formularioEditar', productsController.formEdit);
+router.get('/:id/edit', productsController.formEdit);
 
-router.put('/:id/formularioEditar', productsController.edit)
+router.put('/:id/edit', productsController.edit)
 
 
 
