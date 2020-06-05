@@ -1,115 +1,78 @@
-const fs = require('fs');
+const productData = require('../models/product');
+
 let controlador = {
-    index : function (req, res){
-        
+    index : function (req, res) {
 
-    let busqueda = req.query.busqueda;
-    let productoBuscado = [];
+        let products = [];
 
-    for (let i = 0; i < productos.length; i++){
-            if (productos[i].name == busqueda){
-                productoBuscado.push(productos[i]);
-            } else {
-                res.send('ups, el producto no existe : (') //  <-- preguntar esto!
-            }
-    }
-    
-        res.render('products', { productoBuscado : productoBuscado });
-    },
+        if (req.query.busqueda) {
 
-
-    list: function (req, res) {
-        
-        let archivoProductos = fs.readFileSync('./data/products.json', { encoding: 'utf-8' });
-        let productos;
-        if (archivoProductos == '') {
-            productos = [];
+            products = productData.filterByName(req.query.busqueda);
         } else {
-           productos = JSON.parse(archivoProductos);
+
+            products = productData.findAll();
         }
         
-        res.render('products', { productos: productos });
-        
+        res.render('products', { products : products } );
     },
 
-    create: function (req, res){
+    formCreate : function (req, res) {
         
         res.render('create');
+    
     },
 
-    detail: function(req, res) {
-        let productId = req.params.id;
+    create : function (req, res, next) {
 
-        let archivoProductos = fs.readFileSync('./data/products.json', { encoding: 'utf-8' });
-        let productos;
-        if (archivoProductos == '') {
-            productos = [];
-        } else {
-            productos = JSON.parse(archivoProductos);
-        }
-
-        let detalleProducto = [];
-        
-        for (let i = 0; i < productos.length; i++){
-            if (productos[i].id == productId){
-                detalleProducto.push(productos[i]);
-            }/* else {
-                res.send('ups, el producto no existe : (') //  <-- preguntar esto!
-            }*/
-
-        }
-        
-         res.render('detalleProducto', { detalleProducto: detalleProducto } );
-        
-    },
-
-    register: function (req,res) {
-       
-        let archivoProductos = fs.readFileSync('./data/products.json', { encoding: 'utf-8' });
-        let productos;
-        if (archivoProductos == '') {
-            productos = [];
-        } else {
-            productos = JSON.parse(archivoProductos);
-        }
-        
-        let producto = {
+        let product = {
             name: req.body.nombre,
             modelo: req.body.modelo,
             price: req.body.precio,
             description: req.body.mensaje,
             descuento: req.body.tiene,
             clasificacion: req.body.clasificacion,
-        }
+            foto : req.files[0].filename
+        } 
 
-        productos.push(producto);
+        productData.create(product);
 
-        let productosJson = JSON.stringify(productos);
-
-        fs.writeFileSync('./data/products.json', productosJson);
-
-        res.render('products', { productos: productos });
+        res.redirect('products');
+        
     },
 
-    formEdit: function (req, res){
-        
+    detail : function (req, res) {
+
+       let products = productData.findAll();
+
+       let product = products.find(function(prod){
+           return req.params.id == prod.id
+       });
+
+       console.log(product);
+       
+       
+        res.render('detail', { product : product });
+
+    },
+
+    formEdit : function (req, res) {
+
         res.render('edit');
+
     },
 
-    edit: function (req, res) {
+    edit : function (req, res) {
 
-        let archivoProductos = fs.readFileSync('./data/products.json', { encoding: 'utf-8' });
-        let productos;
-        if (archivoProductos == '') {
-            productos = [];
-        } else {
-            productos = JSON.parse(archivoProductos);
-        }
-        
-        res.redirect('/products');
+        res.render('products');
+
     },
-    
-    
+
+    delete : function (req, res) {
+
+        res.render('products');
+
+    }
+
 };
 
 module.exports = controlador;

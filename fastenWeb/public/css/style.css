@@ -437,11 +437,22 @@ main div.registerForm p {
       padding: 5px;
     }
 
+    /*style detail */
+
+    div.detail {
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
     /*style listado de productos*/
 
     div.list {
       margin: 20px auto;
       padding: 0px 20px;
+      }
+
+      div.list img {
+        width: 100%;
       }
 
     div.list div.products h2 {

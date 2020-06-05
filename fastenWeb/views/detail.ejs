@@ -1,0 +1,40 @@
+<%- include('./partials/head') %>
+
+<%- include('./partials/header') %>
+
+<body>
+
+
+    <main>
+
+        <div class="detail">
+
+            <div>
+
+                <img src="../img/productos/<%= product.foto %>" alt="foto del producto" class="foto">
+
+            </div>
+
+            <div class="datos">
+                
+                <h2><%= product.name %></h2>
+
+                <h3><%= product.price %></h3>
+
+                <p>Descripción</p>
+
+                <p><%= product.description %></p>
+
+                <p class="clasificacion">Clasificación: <%= product.clasificacion%></p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <%- include('./partials/footer') %>
+
+</body>
+
+</html>
