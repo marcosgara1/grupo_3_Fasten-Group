@@ -28,7 +28,7 @@ let controlador = {
             name: req.body.nombre,
             modelo: req.body.modelo,
             price: req.body.precio,
-            description: req.body.mensaje,
+            description: req.body.description,
             descuento: req.body.tiene,
             clasificacion: req.body.familia,
             foto : req.files[0].filename
@@ -64,9 +64,23 @@ let controlador = {
 
     edit : function (req, res) {
 
+        let prodId = req.params.id;
         
+        let product = productData.findByPK(prodId);
 
-        res.render('products');
+        product.name = req.body.name;
+        product.modelo = req.body.modelo;
+        product.price = req.body.price;
+        product.description = req.body.description;
+
+        if (req.file) {
+            
+            product.fot = req.file.path.replace('public/', '/');
+        }
+
+        productData.update(product);        
+
+        res.redirect('products');
 
     },
 

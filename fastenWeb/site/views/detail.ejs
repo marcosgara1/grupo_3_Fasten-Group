@@ -9,25 +9,17 @@
 
         <div class="detail">
 
-            <div>
+            <img src="../img/productos/<%= product.foto %>" alt="foto del producto" class="foto">
 
-                <img src="../img/productos/<%= product.foto %>" alt="foto del producto" class="foto">
+            <h2><%= product.name %></h2>
 
-            </div>
+            <h3><%= product.price %></h3>
 
-            <div class="datos">
-                
-                <h2><%= product.name %></h2>
+            <p>Descripción</p>
 
-                <h3><%= product.price %></h3>
+            <p><%= product.description %></p>
 
-                <p>Descripción</p>
-
-                <p><%= product.description %></p>
-
-                <p class="clasificacion">Clasificación: <%= product.clasificacion%></p>
-
-            </div>
+            <p class="clasificacion">Clasificación: <%= product.clasificacion%></p>
 
         </div>
 

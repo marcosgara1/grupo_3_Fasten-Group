@@ -71,6 +71,8 @@ let productData = {
             return prod.id != editProd.id;
         });
 
+        array.push(editProd);
+
         jsonData = JSON.stringify(array, null, ' ');
 
         fs.writeFileSync(fileData, jsonData);

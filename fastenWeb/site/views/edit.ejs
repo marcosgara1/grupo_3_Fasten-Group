@@ -5,17 +5,17 @@
 
     <div class="productAdd">
 
-        <form  method="POST" action="products/:id/edit?_method=PUT">
+        <form  method="POST" action="/products/<%= product.id %>?_method=PUT" enctype="multipart/form-data">
             <div>
-               <input type="nombre" name="nombre" placeholder="Nombre">
+               <input type="nombre" name="nombre" placeholder="Nombre" value="<%= product.name %>">
             </div>
         
             <div>
-                <input type="nomenclatura" name="modelo" placeholder="Modelo">
+                <input type="nomenclatura" name="modelo" placeholder="Modelo" value="<%= product.modelo %>">
             </div>
         
             <div>
-                <input type="precio" name="precio" placeholder="Precio">
+                <input type="precio" name="precio" placeholder="Precio" value="<%= product.price %>">
             </div>
         
             <div class="descuento">
@@ -33,10 +33,11 @@
             </div>
         
             <div>
-                <textarea name="mensaje" placeholder="Descripción"></textarea>    
+                <textarea name="description" placeholder="<%= product.description %>" value="<%= product.description %>"></textarea>    
             </div>
 
             <div>
+                <img src="<%= product.foto %>" alt="">
                 <input type="file" name="foto">Agregar foto</button>
             </div>
         
