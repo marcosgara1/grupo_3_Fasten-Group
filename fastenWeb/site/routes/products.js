@@ -26,7 +26,7 @@ router.get('/:id', productsController.detail);
 
 router.get('/:id/edit', productsController.formEdit);
 
-router.put('/:id', productsController.edit);
+router.put('/:id', upload.any('foto'),productsController.edit);
 
 router.delete('/:id', productsController.delete);
 

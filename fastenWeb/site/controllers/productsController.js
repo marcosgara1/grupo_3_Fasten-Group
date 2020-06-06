@@ -25,11 +25,10 @@ let controlador = {
     create : function (req, res, next) {
 
         let product = {
-            name: req.body.nombre,
+            name: req.body.name,
             modelo: req.body.modelo,
-            price: req.body.precio,
+            price: req.body.price,
             description: req.body.description,
-            descuento: req.body.tiene,
             clasificacion: req.body.familia,
             foto : req.files[0].filename
         } 
@@ -72,15 +71,16 @@ let controlador = {
         product.modelo = req.body.modelo;
         product.price = req.body.price;
         product.description = req.body.description;
+        product.foto = req.files[0].filename;
 
         if (req.file) {
             
-            product.fot = req.file.path.replace('public/', '/');
+            product.foto = req.file.path.replace('public/', '/img');
         }
 
         productData.update(product);        
 
-        res.redirect('products');
+        res.redirect('/products');
 
     },
 

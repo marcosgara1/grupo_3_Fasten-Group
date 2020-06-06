@@ -450,21 +450,33 @@
   "clasificacion": "seguridad"
  },
  {
-  "name": "Ron",
-  "modelo": "Ron añejo Barcelo",
-  "price": "10",
-  "description": "roncito",
+  "name": "ron",
+  "modelo": "havanna club",
+  "price": "250",
+  "description": "ron havanna club",
   "descuento": "sí",
-  "foto": "foto-1591318380276.jpg",
-  "id": 51
+  "clasificacion": "Seg",
+  "foto": "foto-1591410888606.jpg",
+  "id": 52
  },
  {
-  "name": "Birri",
-  "modelo": "Andes roja",
-  "price": "60",
-  "description": "birri riji",
+  "name": "cerveza",
+  "modelo": "andes",
+  "price": "5000",
+  "description": "cerveza roja andes, se llevamos a su casa",
   "descuento": "sí",
-  "foto": "foto-1591318418459.jpg",
-  "id": 52
+  "clasificacion": "Seg",
+  "foto": "foto-1591410910250.jpg",
+  "id": 53
+ },
+ {
+  "modelo": "barcelo",
+  "description": "ron barcelo",
+  "descuento": "sí",
+  "clasificacion": "Seg",
+  "foto": "foto-1591411465067.jpg",
+  "id": 51,
+  "name": "ron",
+  "price": "9999999999999"
  }
 ]
