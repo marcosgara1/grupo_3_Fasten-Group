@@ -30,7 +30,7 @@ let controlador = {
             price: req.body.precio,
             description: req.body.mensaje,
             descuento: req.body.tiene,
-            clasificacion: req.body.clasificacion,
+            clasificacion: req.body.familia,
             foto : req.files[0].filename
         } 
 
@@ -47,9 +47,6 @@ let controlador = {
        let product = products.find(function(prod){
            return req.params.id == prod.id
        });
-
-       console.log(product);
-       
        
         res.render('detail', { product : product });
 
@@ -57,11 +54,17 @@ let controlador = {
 
     formEdit : function (req, res) {
 
-        res.render('edit');
+        let prodId = req.params.id;
+
+        let productoEncontrado = productData.findByPK(prodId);
+
+        res.render('edit', { product : productoEncontrado});
 
     },
 
     edit : function (req, res) {
+
+        
 
         res.render('products');
 

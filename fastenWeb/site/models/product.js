@@ -55,11 +55,26 @@ let productData = {
         return prod.name.toLowerCase().search(search) >= 0;
 
         });
-    }
+    },
+
+    findByPK : function (id) {
+        return this.findAll().find(function(producto){
+            return producto.id == id;
+        });
+    },
+
+    update : function (editProd) {
+        
+        let array = this.findAll();
+
+        array = array.filter(function(prod){
+            return prod.id != editProd.id;
+        });
+
+        jsonData = JSON.stringify(array, null, ' ');
+
+        fs.writeFileSync(fileData, jsonData);
+    }   
 };
-
-
-
-
 
 module.exports = productData;
