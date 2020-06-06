@@ -1,3 +1,25 @@
+h1{
+  text-align: center; 
+}
+h2{
+  text-align: center; 
+}
+h3{
+  text-align: center; 
+}
+
+/*style página de error */
+div.pantallaError{
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 150px;
+}
+img.error{
+  width: 25%;
+  margin-left: 390px;
+  margin-bottom: 25px;
+}
+
 
 body {
   background-color: #eeeeee ;
@@ -160,36 +182,10 @@ footer div.contenedor-abajo div.redes {
 }
 
 /*home*/
-.banner {
-  display: none;
+
+div.banner img {
+  width: 100%;
 }
-
-section.destacado{
-  display: none;
-  }
-  
-  .productos{
-      display: flex;
-      width: 100%;
-      padding: 15px;
-      border: none;
-      margin: 5px;
-      box-sizing: border-box;
-      font-size: 1rem;
-      text-decoration: none;
-      flex-wrap: wrap;
-      justify-content: center;
-      text-align: left;
-  }
-  
-  .photo {
-      width: 95%;
-      justify-content: center;
-  }
-
-  .p {
-    text-align: left;
-  }
 
 
 /*style registro de usuario*/
@@ -445,6 +441,10 @@ main div.registerForm p {
     }
 
     /*style listado de productos*/
+
+    a.linkProd{
+      color: #123F59;
+    }
 
     div.list {
       margin: 20px auto;
