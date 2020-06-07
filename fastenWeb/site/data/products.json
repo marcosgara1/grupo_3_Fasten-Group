@@ -450,16 +450,6 @@
   "clasificacion": "seguridad"
  },
  {
-  "name": "ron",
-  "modelo": "havanna club",
-  "price": "250",
-  "description": "ron havanna club",
-  "descuento": "sí",
-  "clasificacion": "Seg",
-  "foto": "foto-1591410888606.jpg",
-  "id": 52
- },
- {
   "name": "cerveza",
   "modelo": "andes",
   "price": "5000",
@@ -470,13 +460,23 @@
   "id": 53
  },
  {
-  "modelo": "barcelo",
-  "description": "ron barcelo",
+  "name": "aguardiente",
+  "modelo": "antioqueño",
+  "price": "3000",
+  "description": "aguardiente antioqueño",
   "descuento": "sí",
   "clasificacion": "Seg",
-  "foto": "foto-1591411465067.jpg",
+  "foto": "foto-1591411717177.png",
+  "id": 52
+ },
+ {
+  "modelo": "negrp",
+  "description": "cafe",
+  "descuento": "sí",
+  "clasificacion": "Seg",
+  "foto": "foto-1591504742475.png",
   "id": 51,
-  "name": "ron",
-  "price": "9999999999999"
+  "name": "cafe",
+  "price": "5555555"
  }
 ]

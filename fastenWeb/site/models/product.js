@@ -76,7 +76,20 @@ let productData = {
         jsonData = JSON.stringify(array, null, ' ');
 
         fs.writeFileSync(fileData, jsonData);
-    }   
+    },
+
+    delete : function (deleteProd) {
+      
+        let array =this.findAll();
+
+        array = array.filter(function(prod){
+            return prod.id != deleteProd;
+        });
+
+        jsonData = JSON.stringify(array, null, ' ');
+
+        fs.writeFileSync(fileData, jsonData);
+    }
 };
 
 module.exports = productData;

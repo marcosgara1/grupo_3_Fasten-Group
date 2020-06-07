@@ -75,7 +75,7 @@ let controlador = {
 
         if (req.file) {
             
-            product.foto = req.file.path.replace('public/', '/img');
+            product.foto = req.file.path.replace('public/', '/');
         }
 
         productData.update(product);        
@@ -86,9 +86,16 @@ let controlador = {
 
     delete : function (req, res) {
 
-        res.render('products');
+        let prodId = req.params.id;
+        
+        let product = productData.findByPK(prodId);
+
+        productData.delete(product);
+
+        res.redirect('products');
 
     }
+    
 
 };
 
