@@ -76,6 +76,7 @@ let productData = {
         jsonData = JSON.stringify(array, null, ' ');
 
         fs.writeFileSync(fileData, jsonData);
+<<<<<<< HEAD
     },
 
     delete : function (deleteProd) {
@@ -88,6 +89,22 @@ let productData = {
 
         jsonData = JSON.stringify(array, null, ' ');
 
+=======
+    },   
+
+    delete : function(deleteProd) {
+        let array = this.findAll();
+        
+        array = array.filter(function(prod) {
+            return prod.id != deleteProd.id ;
+        });
+        //elimino la que me llego por parametro
+        array.splice(deleteProd);
+
+        //convertir a json ese array con el producto eliminado
+        jsonData = JSON.stringify(array, null, " ");
+        //escribo
+>>>>>>> 2ace67b8fefabace6d2064270f4b9fd06e7a599f
         fs.writeFileSync(fileData, jsonData);
     }
 };

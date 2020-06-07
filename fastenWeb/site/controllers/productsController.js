@@ -86,6 +86,7 @@ let controlador = {
 
     delete : function (req, res) {
 
+<<<<<<< HEAD
         let prodId = req.params.id;
         
         let product = productData.findByPK(prodId);
@@ -93,6 +94,15 @@ let controlador = {
         productData.delete(product);
 
         res.redirect('products');
+=======
+       let products = productData.findAll();
+
+       let product = products.find(function(prod){
+           return req.params.id == prod.id
+       });
+       
+        res.render('products', { product : product });
+>>>>>>> 2ace67b8fefabace6d2064270f4b9fd06e7a599f
 
     }
     
