@@ -1,0 +1,20 @@
+<%- include('./partials/head') %>
+<body>
+    <%- include('./partials/header') %>
+
+
+    <div class="delete">
+
+        <form action="/products/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+            <div>
+                <label for="confirmación">¿Estás seguro que deseás eliminar este producto?</label>
+                <input type="submit" name="confirm">Sí</button>
+            </div>
+        
+        </form>
+    
+    </div>
+<%- include('./partials/footer') %>
+
+</body>
+</html>

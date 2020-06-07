@@ -86,7 +86,13 @@ let controlador = {
 
     delete : function (req, res) {
 
-        res.render('products');
+       let products = productData.findAll();
+
+       let product = products.find(function(prod){
+           return req.params.id == prod.id
+       });
+       
+        res.render('products', { product : product });
 
     }
 

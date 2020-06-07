@@ -14,10 +14,9 @@
 
             <div class="productos">
 
-                <a href="/grupo_3_Marquentin/fastenWeb/site/views/[i]"><img src="../img/productos/<%= products[i].foto %>" alt="foto del producto" class="foto"></a>
-                <a href="/grupo_3_Marquentin/fastenWeb/site/views/[i]" class="linkProd"><h2><%= products[i].name %></h2></a>
+                <a href="/products/:id"><img src="../img/productos/<%= products[i].foto %>" alt="foto del producto" class="foto"></a>
+                <a href="/products/:id" class="linkProd"><h2><%= products[i].name %></h2></a>
                 <h3><%= products[i].price %></h3>
-                <p>Descripción:</p>
                 <p><%= products[i].description%></p>
                 <p class="clasificacion">Clasificación: <%= products[i].clasificacion%></p>
 

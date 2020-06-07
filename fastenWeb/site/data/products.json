@@ -27,15 +27,6 @@
   "clasificacion": "seguridad"
  },
  {
-  "id": 4,
-  "name": "Milvus migrans",
-  "price": 0,
-  "description": "ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien",
-  "descuento": false,
-  "image": "product_4.jpg",
-  "clasificacion": "aparatos de testeo"
- },
- {
   "id": 5,
   "name": "Milvus migrans",
   "price": 0,
@@ -478,5 +469,40 @@
   "id": 51,
   "name": "ron",
   "price": "9999999999999"
+ },
+ {
+  "modelo": "FST402",
+  "description": "sarasa",
+  "foto": "foto-1591490182208.png",
+  "id": 54
+ },
+ {
+  "modelo": "FST402",
+  "description": "dfdfdfdfd",
+  "foto": "foto-1591496642106.png",
+  "id": 55
+ },
+ {
+  "modelo": "FST402",
+  "description": "hjhjhj",
+  "foto": "foto-1591496794235.png",
+  "id": 56
+ },
+ {
+  "modelo": "FST402",
+  "description": "hjhjhj",
+  "foto": "foto-1591496861608.png",
+  "id": 57
+ },
+ {
+  "id": 4,
+  "name": "Milvus migrans",
+  "price": "0",
+  "description": "ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien",
+  "descuento": false,
+  "image": "product_4.jpg",
+  "clasificacion": "aparatos de testeo",
+  "modelo": "sd",
+  "foto": "foto-1591498222517.png"
  }
 ]
