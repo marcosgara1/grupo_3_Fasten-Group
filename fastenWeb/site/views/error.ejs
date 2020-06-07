@@ -3,6 +3,10 @@
 <%- include('./partials/header') %>
 
 <body>
+
+    <h1><%= message %></h1>
+<h2><%= error.status %></h2>
+<pre><%= error.stack %></pre>
    <div class="pantallaError">
     <img class="error" src="/img/cartel-error.png" alt="Página de error">
     <h1 class="error">CHAQUE, NO ES POR AHÍ<h1>

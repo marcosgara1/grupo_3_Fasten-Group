@@ -16,18 +16,12 @@ var storage = multer.diskStorage({
 
 const productsController = require('../controllers/productsController');
 
+
 router.get('/', productsController.index);
 
 router.get('/create', productsController.formCreate);
 
-router.post('/', upload.any('foto'),productsController.create), [
-  check('name'),isLength({min:2}).withMessage('El nombre debe tener al menos 2 letras'),
-  check('modelo'),isLength({min:2}).withMessage('El modelo debe tener al menos 2 letras'),
-  check('clasificación'),isLength().withMessage('Debe seleccionar una familia de productos'),
-  check('price'),isNumeric().withMessage('Debe establecer un precio'),
-
-]
-
+router.post('/', upload.any('foto'),productsController.create)
 
 router.get('/:id', productsController.detail);
 
@@ -35,7 +29,7 @@ router.get('/:id/edit', productsController.formEdit);
 
 router.put('/:id', upload.any('foto'),productsController.edit);
 
-router.get('/:id/delete', productsController.delete);
+router.delete('/:id', productsController.delete);
 
 
 

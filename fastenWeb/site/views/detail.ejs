@@ -22,20 +22,34 @@
             <p class="clasificacion">Clasificación: <%= product.clasificacion%></p>
 
             <div class="botones">
+
                 <div>
+
                     <button type="button submit" class="btn btn-primary" data-toggle="button" aria-pressed="false">
-                        <a href="/fastenWeb/site/views/edit.ejs">Editar</a>
+
+                        <a href="/products/<%= product.id %>/edit">Editar</a>
+
                     </button>
+
                 </div>
+
                 <div>
-                    <button type="button submit" class="btn btn-primary" data-toggle="button" aria-pressed="false">
-                        <a href="delete">Eliminar</a>
-                    </button>
+
+                    <form action="/products/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+
+                        <button type="submit" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+
+                           Eliminar
+
+                        </button>
+
+                    </form>
+
+                </div>
 
             </div>
-        </div>
 
-        
+
 
     </main>
 

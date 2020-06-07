@@ -479,6 +479,10 @@ main div.registerForm p {
       padding: 0px 20px;
       }
 
+      div.list div.productos {
+        margin: 20px 10px;
+      }
+
       div.list img {
         width: 100%;
       }
@@ -504,6 +508,17 @@ main div.registerForm p {
     div.list div.productos{
       display: flex;
       flex-direction: column;
+    }
+
+    div.botones {
+      font-size: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    div.botones i {
+      color: rgb(18, 63, 89);
     }
     
 

@@ -1,23 +1,5 @@
 [
  {
-  "id": 1,
-  "name": "Ninox superciliaris",
-  "price": 0,
-  "description": "ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus",
-  "descuento": true,
-  "image": "product_1.jpg",
-  "clasificacion": "aparatos de testeo"
- },
- {
-  "id": 2,
-  "name": "Macropus fuliginosus",
-  "price": 0,
-  "description": "donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum",
-  "descuento": false,
-  "image": "product_2.jpg",
-  "clasificacion": "aparatos de testeo"
- },
- {
   "id": 3,
   "name": "Nucifraga columbiana",
   "price": 0,
@@ -439,75 +421,5 @@
   "descuento": true,
   "image": "product_50.jpg",
   "clasificacion": "seguridad"
- },
- {
-  "name": "cerveza",
-  "modelo": "andes",
-  "price": "5000",
-  "description": "cerveza roja andes, se llevamos a su casa",
-  "descuento": "sí",
-  "clasificacion": "Seg",
-  "foto": "foto-1591410910250.jpg",
-  "id": 53
- },
- {
-  "name": "aguardiente",
-  "modelo": "antioqueño",
-  "price": "3000",
-  "description": "aguardiente antioqueño",
-  "descuento": "sí",
-  "clasificacion": "Seg",
-  "foto": "foto-1591411717177.png",
-  "id": 52
- },
- {
-  "modelo": "negrp",
-  "description": "cafe",
-  "descuento": "sí",
-  "clasificacion": "Seg",
-  "foto": "foto-1591504742475.png",
-  "id": 51,
-<<<<<<< HEAD
-  "name": "cafe",
-  "price": "5555555"
-=======
-  "name": "ron",
-  "price": "9999999999999"
- },
- {
-  "modelo": "FST402",
-  "description": "sarasa",
-  "foto": "foto-1591490182208.png",
-  "id": 54
- },
- {
-  "modelo": "FST402",
-  "description": "dfdfdfdfd",
-  "foto": "foto-1591496642106.png",
-  "id": 55
- },
- {
-  "modelo": "FST402",
-  "description": "hjhjhj",
-  "foto": "foto-1591496794235.png",
-  "id": 56
- },
- {
-  "modelo": "FST402",
-  "description": "hjhjhj",
-  "foto": "foto-1591496861608.png",
-  "id": 57
- },
- {
-  "id": 4,
-  "name": "Milvus migrans",
-  "price": "0",
-  "description": "ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien",
-  "descuento": false,
-  "image": "product_4.jpg",
-  "clasificacion": "aparatos de testeo",
-  "modelo": "sd",
-  "foto": "foto-1591498222517.png"
->>>>>>> 2ace67b8fefabace6d2064270f4b9fd06e7a599f
  }
 ]
