@@ -91,9 +91,7 @@ let controlador = {
         
         let product = productData.findByPK(prodId);
 
-        productData.delete(product); 
-        
-       console.log(productData.delete(52)); 
+        productData.delete(product.id); 
         
         res.redirect('/products');
         

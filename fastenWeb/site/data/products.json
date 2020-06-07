@@ -1,14 +1,5 @@
 [
  {
-  "id": 3,
-  "name": "Nucifraga columbiana",
-  "price": 0,
-  "description": "sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc",
-  "descuento": true,
-  "image": "product_3.jpg",
-  "clasificacion": "seguridad"
- },
- {
   "id": 5,
   "name": "Milvus migrans",
   "price": 0,
@@ -394,32 +385,5 @@
   "descuento": true,
   "image": "product_47.jpg",
   "clasificacion": "trabajos con tension"
- },
- {
-  "id": 48,
-  "name": "Diomedea irrorata",
-  "price": 0,
-  "description": "justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus",
-  "descuento": false,
-  "image": "product_48.jpg",
-  "clasificacion": "trabajos con tension"
- },
- {
-  "id": 49,
-  "name": "Oreamnos americanus",
-  "price": 0,
-  "description": "interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu",
-  "descuento": false,
-  "image": "product_49.jpg",
-  "clasificacion": "seguridad"
- },
- {
-  "id": 50,
-  "name": "Anastomus oscitans",
-  "price": 0,
-  "description": "etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna",
-  "descuento": true,
-  "image": "product_50.jpg",
-  "clasificacion": "seguridad"
  }
 ]
