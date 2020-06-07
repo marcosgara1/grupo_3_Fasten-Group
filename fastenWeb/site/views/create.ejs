@@ -6,16 +6,20 @@
     <div class="productAdd">
 
         <form action="/products" method="POST" enctype="multipart/form-data">
+            
             <div>
-               <input type="nombre" name="nombre" placeholder="Nombre">
+                <h3> Nombre del producto </h3>
+               <input type="nombre" name="name" placeholder="Nombre">
             </div>
         
             <div>
+                <h3>Nomenclatura del modelo</h3>
                 <input type="nomenclatura" name="modelo" placeholder="Modelo">
             </div>
         
             <div>
-                <input type="precio" name="precio" placeholder="Precio">
+                <h3>Precio</h3>
+                <input type="precio" name="price" placeholder="Precio">
             </div>
         
             <div>
@@ -29,7 +33,13 @@
             </div>
         
             <div>
+                <h3>Descripción</h3>
                 <textarea name="description" placeholder="Descripción"></textarea>    
+            </div>
+
+            <div>
+                <h3>Descripción breve</h3>
+                <textarea class="segunda" name="descriptionSeg" placeholder="Descripción breve"></textarea>    
             </div>
 
             <div>

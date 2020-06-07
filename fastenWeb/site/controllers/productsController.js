@@ -30,6 +30,7 @@ let controlador = {
             modelo: req.body.modelo,
             price: req.body.price,
             description: req.body.description,
+            descriptionSeg: req.body.descriptionSeg,
             clasificacion: req.body.familia,
             foto : req.files[0].filename
         } 
@@ -72,6 +73,7 @@ let controlador = {
         product.modelo = req.body.modelo;
         product.price = req.body.price;
         product.description = req.body.description;
+        product.descriptionSeg = req.body.descriptionSeg;
         product.foto = req.files[0].filename;
 
         if (req.file) {
