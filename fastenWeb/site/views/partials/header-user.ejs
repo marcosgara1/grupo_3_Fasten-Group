@@ -6,28 +6,28 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style-header.css">
+    <link rel="stylesheet" href="/public/css/style.css">
     <title>Document</title>
 </head>
 <body>
     <header>
         <div class="arriba">
             <div class="logo">
-              <a href="/"><img src="/img/Fasten.png" alt=""></a>
+                <img src="/images/Fasten.png" alt="">
             </div>
             
             <div class="derecha">
-                <div class="iconos">
+                <div class="iconos-cliente">
                     <ul>
                         <li><i class="fas fa-home"></i></li>
                         <li><i class="fas fa-user"></i></li>
-                        <li><i class="fas fa-shopping-cart"></i></li>
-                    </ul>   
+                        <li><i class="fas fa-plus"></i></li>
+                    </ul>
                 </div>
                 <div class="nav-inicio">
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/users/login">Login</a></li>
+                        <li><a href="/user">Perfil</a></li>
                         <li><a href="productCart">Carrito</a></li>
                     </ul>
                 </div>
@@ -55,8 +55,8 @@
                         <a class="nav-link" href="#">Asesoramiento <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
-                <form action="products" method="GET" class="forms">
-                    <input class="buscar" type="search" placeholder="Buscar producto" aria-label="Search" name="busqueda">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar producto" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
                 </form>
             </div>

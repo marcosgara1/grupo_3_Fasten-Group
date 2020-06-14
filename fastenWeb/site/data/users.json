@@ -348,21 +348,5 @@
   "last_name": "Calf",
   "email": "mcalf1d@amazonaws.com",
   "password": "KWUVy3ctd"
- },
- {
-  "first_name": "agustin",
-  "last_name": "agustin",
-  "email": "agustin@agustin.agustin",
-  "password": "$2b$10$xMWtn41sfHFqG1iXlL/WVegvJwZanS72f.RfUZ.Ho9cTeLVmlwA6u",
-  "foto": "foto-1592166772305.jpg",
-  "id": 51
- },
- {
-  "first_name": "agustin",
-  "last_name": "graziani",
-  "email": "agustin@gmail.com",
-  "password": "$2b$10$.9KuF0.onsD8mozkgkIgfeCoanxphWQ0D/xbx3FkcolqM8cLG2KrK",
-  "foto": "foto-1592169115239.jpg",
-  "id": 52
  }
 ]

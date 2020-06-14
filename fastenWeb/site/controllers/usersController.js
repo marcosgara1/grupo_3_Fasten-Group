@@ -19,7 +19,7 @@ let controlador = {
             }
         }
 
-        res.send('Ups, pasaron cosas');
+        res.redirect('/users/login');
     },
 
     formRegister : function (req, res) {
@@ -39,7 +39,7 @@ let controlador = {
 
         userData.create(user);
 
-        res.redirect('/profile', { user : user });
+        res.redirect('products'/*, { user : user }*/);
     }
 
     
