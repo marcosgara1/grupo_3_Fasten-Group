@@ -1,14 +1,5 @@
 [
  {
-  "id": 38,
-  "name": "Diomedea irrorata",
-  "price": 0,
-  "description": "convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis",
-  "descuento": false,
-  "image": "product_38.jpg",
-  "clasificacion": "seguridad"
- },
- {
   "id": 39,
   "name": "Crotalus triseriatus",
   "price": 0,
