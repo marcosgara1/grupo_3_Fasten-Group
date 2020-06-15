@@ -6,21 +6,40 @@ let controlador = {
 
     formLogin: function (req, res) {
 
-        res.render('formularioLogin');
+        res.render('login');
     },
 
     processLogin: function (req, res) {
 
-        let users = userData.findAll();
+        let errors = validationResult(req);
 
-        for (let i = 0; i < users.length; i++) {
-
-            if (req.body.email == users[i].email && bcrypt.compareSync(req.body.password, users[i].password)) {
-                res.redirect('/')
+        if (errors.isEmpty()){            
+            let users = userData.findAll(); 
+            let usuarioALoguearse;           
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].email == req.body.email) {
+                    if (bcrypt.compareSync(req.body.password, users[i].password)){                        
+                        usuarioALoguearse = users[i];
+                        break;
+                    }
+                }
             }
+
+            if (usuarioALoguearse == undefined) {
+                return res.render ('login', {errors: [
+                    {msg: 'Credenciales inválidas'}
+                ]});
+            }
+
+            req.session.usuarioLogueado = usuarioALoguearse;
+            
+            res.redirect('/products');
+
+        } else {
+
+            return res.render('login', { errors : errors.errors});
         }
 
-        res.redirect('/users/login');
     },
 
     formRegister: function (req, res) {

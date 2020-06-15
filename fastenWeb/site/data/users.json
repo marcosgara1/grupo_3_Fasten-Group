@@ -348,5 +348,13 @@
   "last_name": "Calf",
   "email": "mcalf1d@amazonaws.com",
   "password": "KWUVy3ctd"
+ },
+ {
+  "first_name": "agustin",
+  "last_name": "agustin",
+  "email": "agustin@com.com",
+  "password": "$2b$10$APMFjqDCAC9l4ruoLRVobO6CmnntoZjmGcMmQtCIcJavNtC6CuJ/2",
+  "foto": "foto-1592246014472.jpg",
+  "id": 51
  }
 ]
