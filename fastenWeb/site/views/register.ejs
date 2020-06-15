@@ -12,12 +12,35 @@
 </head>
 
 <body>
+
     <%- include('./partials/header') %>
+    
     <main>
+
         <h2>Formulario de registro</h2>
 
+        <% if (typeof errors != 'undefined') { %>
+
+        <ul>
+
+            <% for (let i = 0; i < errors.length; i++) { %>
+
+            <li>
+
+                <%= errors[i].msg %>
+
+            </li>
+
+            <% } %>
+
+        </ul>
+
+        <% } %>
+
         <div class="registerForm">
+
             <form action="/users" method="POST" enctype="multipart/form-data">
+
                 <div>
                     <input type="text" id="nombre" name="first_name" placeholder="Nombre">
                 </div>
@@ -37,15 +60,17 @@
                 <div>
                     <input type="password" id="c_password" name="c_password" placeholder="Confirmar contraseña">
                 </div>
-                
+
                 <div>
                     <input type="file" name="foto">Agregar foto</button>
                 </div>
 
                 <div>
+
                     <button type="button submit" class="btn btn-primary" data-toggle="button" aria-pressed="false">
                         Registrarse
                     </button>
+
                 </div>
 
             </form>
