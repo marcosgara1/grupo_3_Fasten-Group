@@ -23,7 +23,7 @@ const upload = multer({ storage: storage });
 const usersController = require('../controllers/usersController');
 
 
-router.get('/login', guestMiddleware, usersController.formLogin);
+router.get('/login', /*guestMiddleware,*/ usersController.formLogin);
 
 router.post('/login', [
 
@@ -56,12 +56,13 @@ router.post('/', upload.any('foto'), [
     return true;
   }).withMessage('El email ya está registrado'),
 
-  body('c_password').custom(function(value){
-    if ('password' != value){
+  /*body('c_password').custom(function(value){
+    
+    if ("password" != value){
       return false;
     }
     return true;
-  }).withMessage('La contraseña debe coincidir con la ingresada anteriormente')
+  }).withMessage('La contraseña debe coincidir con la ingresada anteriormente')*/
 
 ], usersController.register);
 

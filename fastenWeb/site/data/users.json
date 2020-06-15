@@ -356,5 +356,45 @@
   "password": "$2b$10$APMFjqDCAC9l4ruoLRVobO6CmnntoZjmGcMmQtCIcJavNtC6CuJ/2",
   "foto": "foto-1592246014472.jpg",
   "id": 51
+ },
+ {
+  "first_name": "holis",
+  "last_name": "holis",
+  "email": "holis@holis.holis",
+  "password": "$2b$10$6Jt39//9OSGs2tr3suNAFuaP0lD0dY4V4rD6liUdIt1OcB.jhMUKO",
+  "foto": "foto-1592258069843.jpg",
+  "id": 52
+ },
+ {
+  "first_name": "marcos",
+  "last_name": "marcos",
+  "email": "marcos@marcos.marcos",
+  "password": "$2b$10$SSLdNGIbTtN5mP8dIO7pE.SX6t45xojPRI4JtIRjoKGf7DEEhlSb.",
+  "foto": "foto-1592258110462.jpg",
+  "id": 53
+ },
+ {
+  "first_name": "ailen",
+  "last_name": "ailen",
+  "email": "ailen@ailen.ailen",
+  "password": "$2b$10$xHyqolsZzfPtWvPLA5azyu1OaxeNymLEyUPZvKpS9TPAAEc0lrEwy",
+  "foto": "foto-1592258597345.jpg",
+  "id": 54
+ },
+ {
+  "first_name": "mate",
+  "last_name": "mate",
+  "email": "mate@mate.mate",
+  "password": "$2b$10$t8KhSZ9aaBNJ1WAhquJT9eERkqLIPS6CnUWPGflbiGbCYaopgnLiu",
+  "foto": "foto-1592258631242.jpg",
+  "id": 55
+ },
+ {
+  "first_name": "marley",
+  "last_name": "marley",
+  "email": "marley@marley.marley",
+  "password": "$2b$10$3K2wH85hXhT0PpcY9gV9xOCbC5r0z67kz8kNFA.eNuDqHGBkAcz3u",
+  "foto": "foto-1592258658119.jpg",
+  "id": 56
  }
 ]
