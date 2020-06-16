@@ -396,5 +396,23 @@
   "password": "$2b$10$3K2wH85hXhT0PpcY9gV9xOCbC5r0z67kz8kNFA.eNuDqHGBkAcz3u",
   "foto": "foto-1592258658119.jpg",
   "id": 56
+ },
+ {
+  "first_name": "Lee",
+  "last_name": "Morgan",
+  "email": "lee@morgan.com",
+  "password": "$2b$10$yZvipcb7PaJ285Bq88sel.09ZlzOHqC.NNg//QGdJnKQlvTVxrIqq",
+  "c_password": "12345678",
+  "foto": "foto-1592342204983.jpg",
+  "id": 57
+ },
+ {
+  "first_name": "Chet",
+  "last_name": "Baker",
+  "email": "chet@baker.com",
+  "password": "$2b$10$tug80pMH9ulmsp0YGBrqzugaiuQv.8oU902k4Y2rDZMxk4p3QwDha",
+  "c_password": "12345678",
+  "foto": "foto-1592342273336.jpg",
+  "id": 58
  }
 ]

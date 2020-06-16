@@ -93,7 +93,7 @@ let userData = {
 
         fs.writeFileSync(usersData, jsonData);
         
-    }
+    },
   
 };
 

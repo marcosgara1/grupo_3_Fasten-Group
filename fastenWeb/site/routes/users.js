@@ -21,6 +21,7 @@ var storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 const usersController = require('../controllers/usersController');
+const { confirmPassword } = require('../models/user');
 
 
 router.get('/login', /*guestMiddleware,*/ usersController.formLogin);
@@ -56,13 +57,13 @@ router.post('/', upload.any('foto'), [
     return true;
   }).withMessage('El email ya está registrado'),
 
-  /*body('c_password').custom(function(value){
-    
-    if ("password" != value){
-      return false;
+  body('c_password').custom((value,{req, loc, path}) => {
+    if (value !== req.body.password) {
+        return false;
+    } else {
+        return true;
     }
-    return true;
-  }).withMessage('La contraseña debe coincidir con la ingresada anteriormente')*/
+    }).withMessage('Los password deben coincidir')
 
 ], usersController.register);
 
