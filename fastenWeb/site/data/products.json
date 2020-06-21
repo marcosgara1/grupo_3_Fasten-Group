@@ -1,14 +1,5 @@
 [
  {
-  "id": 39,
-  "name": "Crotalus triseriatus",
-  "price": 0,
-  "description": "amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque",
-  "descuento": true,
-  "image": "product_39.jpg",
-  "clasificacion": "trabajos con tension"
- },
- {
   "id": 40,
   "name": "Kobus defassa",
   "price": 0,

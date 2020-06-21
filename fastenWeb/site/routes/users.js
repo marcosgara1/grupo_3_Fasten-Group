@@ -24,27 +24,25 @@ const usersController = require('../controllers/usersController');
 const { confirmPassword } = require('../models/user');
 
 
-router.get('/login', /*guestMiddleware,*/ usersController.formLogin);
+router.get('/login', authMiddleware, usersController.formLogin);
 
-router.post('/login', [
+router.post('/login', authMiddleware, [
 
   check('email').isEmail().withMessage('Email inválido'),
 
-  check('password').isLength({min: 8}).withMessage('La contraseña debe poseer al menos 8 caracteres'),
+  check('password').isLength({ min: 8 }).withMessage('La contraseña debe poseer al menos 8 caracteres'),
 
-],usersController.processLogin)
+], usersController.processLogin)
 
-router.get('/register', /*authMiddleware,*/ usersController.formRegister);
+router.get('/register', authMiddleware, usersController.formRegister);
 
-router.post('/', upload.any('foto'), [
+router.post('/', upload.any('foto'), authMiddleware, [
 
   check('first_name').isLength({ min: 1 }).withMessage('Este campo debe estar completo'),
 
   check('last_name').isLength({ min: 1 }).withMessage('Este campo debe estar completo'),
 
   check('email').isEmail().withMessage('Debe ingresar un email válido'),
-
-  check('password').isLength({ min: 8 }).withMessage('La contraseña debe poseer al menos 8 caracteres'),
 
   body('email').custom(function (value) {
 
@@ -57,14 +55,15 @@ router.post('/', upload.any('foto'), [
     return true;
   }).withMessage('El email ya está registrado'),
 
-  body('c_password').custom((value,{req, loc, path}) => {
-    if (value !== req.body.password) {
-        return false;
-    } else {
-        return true;
-    }
-    }).withMessage('Los password deben coincidir')
+  check('password').isLength({ min: 8 }).withMessage('La contraseña debe poseer al menos 8 caracteres'),
+
+  check('password', 'Las contraseñas deben coincidir')
+    .custom((value, { req }) => {
+      return value === req.body.c_password
+    }),
 
 ], usersController.register);
+
+//router.get('/:id', usersController.profile);
 
 module.exports = router;
