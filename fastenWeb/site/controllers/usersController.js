@@ -71,7 +71,13 @@ let controlador = {
             res.render('register', { errors: errors.errors });
 
         }
+
+    profile : (req,res) => {
+        return res.send(res.locals);
     }
+
+    }
+
 
 
 };

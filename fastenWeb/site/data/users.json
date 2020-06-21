@@ -414,5 +414,23 @@
   "c_password": "12345678",
   "foto": "foto-1592342273336.jpg",
   "id": 58
+ },
+ {
+  "first_name": "Ailén",
+  "last_name": "Vera",
+  "email": "alenguadalupe@gmail.com",
+  "password": "$2b$10$fNc82yoz7TDXreYOZIHAFOYZ5vHHXraATDGWSsLBru4/ivIYje0La",
+  "c_password": "xH2pujazx2c8SYS",
+  "foto": "foto-1592426667549.jpg",
+  "id": 59
+ },
+ {
+  "first_name": "Yo",
+  "last_name": "Merengues",
+  "email": "yomen@yoyo.com",
+  "password": "$2b$10$zUE30YunMG3OXZsBcpqRz.WAhdH4chTFLkjrfsNdB5CE4f1N30cBu",
+  "c_password": "147852369",
+  "foto": "foto-1592427259629.jpg",
+  "id": 60
  }
 ]

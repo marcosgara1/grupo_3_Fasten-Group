@@ -255,6 +255,12 @@ main div.registerForm p {
 
   }*/
 
+  h2.tit {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 60px;
+  }
+
   form div h3{
     text-align: center;
     font-size: 20px;

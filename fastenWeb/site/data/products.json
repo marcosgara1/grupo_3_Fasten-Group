@@ -1,109 +1,38 @@
 [
  {
-  "id": 39,
-  "name": "Crotalus triseriatus",
-  "price": 0,
-  "description": "amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque",
-  "descuento": true,
-  "image": "product_39.jpg",
-  "clasificacion": "trabajos con tension"
+  "name": "Grapa de PATT",
+  "modelo": "CT364",
+  "price": "0000",
+  "description": "FASTEN® \r\nGrapa-morseto de toma de tierra – Uso AT / MT\r\nCaras planas - Ajuste manual a tornillo, terminal T\r\nRangos de conexión: Secciones rectas: MIN 10mm - MAX 50mm – Secciones redondas Ø MIN 10mm – Ø MAX 30mm\r\nConexión derivada por terminal a compresión (doble pisada, estanco, Cu estañado) – Rango de conexión derivada secciones de cable Cu MIN 16mm² - MAX 185mm²\r\nCUERPO: diseño de caras planas – apto ajuste secciones redondo o hexagonal - Fabricación en fundición de Bronce – Tratamiento superficial granallado\r\nMORDAZA: de alta superficie de contacto – Fabricación en fundición de Bronce\r\nAJUSTE: a tornillo, rosca trapezoidal Ø16 – Terminación en T – Material Acero F24 – Tratamiento superficial cincado electrolítico – Torque de instalación 3daN\r\nOpciones de terminales ojal – bayoneta – cardan sólo a solicitud\r\nCorriente de cortocircuito MAX Icc 40kA/seg\r\n",
+  "descriptionSeg": "FASTEN® \r\nGrapa de toma de tierra - AT/MT ",
+  "foto": "foto-1592429740805.jpg",
+  "id": 52
  },
  {
-  "id": 40,
-  "name": "Kobus defassa",
-  "price": 0,
-  "description": "consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo",
-  "descuento": false,
-  "image": "product_40.jpg",
-  "clasificacion": "trabajos con tension"
+  "name": "Grapa de PATT",
+  "modelo": "CT365",
+  "price": "0000",
+  "description": "FASTEN® \r\nGrapa-morseto de toma de tierra – Uso AT / MT\r\nCaras planas - Ajuste manual a tornillo, terminal T\r\nRangos de conexión: Secciones rectas: MIN 10mm - MAX 50mm – Secciones redondas Ø MIN 10mm – Ø MAX 30mm\r\nConexión derivada por terminal a compresión (doble pisada, estanco, Cu estañado) – Rango de conexión derivada secciones de cable Cu MIN 16mm² - MAX 185mm²\r\nCUERPO: diseño de caras planas – apto ajuste secciones redondo o hexagonal - Fabricación en fundición de Bronce – Tratamiento superficial granallado\r\nMORDAZA: de alta superficie de contacto – Fabricación en fundición de Bronce\r\nAJUSTE: a tornillo, rosca trapezoidal Ø16 – Terminación en T – Material Acero F24 – Tratamiento superficial cincado electrolítico – Torque de instalación 3daN\r\nOpciones de terminales ojal – bayoneta – cardan sólo a solicitud\r\nCorriente de cortocircuito MAX Icc 40kA/seg\r\n",
+  "descriptionSeg": "Grapa de toma de tierra – AT / MT",
+  "foto": "foto-1592429778505.jpg",
+  "id": 53
  },
  {
-  "id": 41,
-  "name": "Neophoca cinerea",
-  "price": 0,
-  "description": "in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur",
-  "descuento": true,
-  "image": "product_41.jpg",
-  "clasificacion": "seguridad"
+  "name": "Grapa de PATT",
+  "modelo": "CT3650",
+  "price": "0000",
+  "description": "FASTEN®\r\nGrapa de fase para líneas aéreas – Uso AT\r\nDiseño apto ajuste secciones redondas o rectas - Ajuste a tornillo\r\nRangos de conexión: \r\n- Secciones redondas Cu Ø MIN 10mm – Ø MAX 50mm \r\n- Secciones rectas: MIN 15mm - MAX 50mm\r\nConexión derivada tipo Fontenay – Rango de conexión derivada secciones de cable Cu MIN 50mm² - MAX 185mm² - Ajuste del conductor al cuerpo por bulón material Acero Inoxidable AISI314\r\nCUERPO: de recorrido plano apto ajuste secciones redondas o rectas – Diseño con anclaje para alojamiento de cabezal de pértiga de gancho retráctil - Fabricación en fundición de Aluminio – Tratamiento superficial granallado\r\nMORDAZA: de alta superficie de contacto – Fabricación en fundición de Bronce\r\nAJUSTE: a tornillo, rosca trapezoidal Ø19 – Terminación std bayoneta – Opciones a solicitud, ojal, cardan, T - Material Acero F24 – Tratamiento superficial cincado electrolítico – Torque de instalación 4daN\r\nFUNCIONAL: varilla de tope de aproximación a línea, para facilitar la acción de acercamiento a la línea eléctrica desde el trabajo a distancia – Barra de Acero Inoxidable AISI314\r\nCorriente de cortocircuito MAX Icc 40kA/seg\r\n",
+  "descriptionSeg": "FASTEN® Grapa de fase para líneas aéreas - AT",
+  "foto": "foto-1592429925478.jpg",
+  "id": 51
  },
  {
-  "id": 42,
-  "name": "Felis silvestris lybica",
-  "price": 0,
-  "description": "magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum",
-  "descuento": false,
-  "image": "product_42.jpg",
-  "clasificacion": "trabajos con tension"
- },
- {
-  "id": 43,
-  "name": "Connochaetus taurinus",
-  "price": 0,
-  "description": "sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi",
-  "descuento": true,
-  "image": "product_43.jpg",
-  "clasificacion": "aparatos de testeo"
- },
- {
-  "id": 44,
-  "name": "Felis silvestris lybica",
-  "price": 0,
-  "description": "est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in",
-  "descuento": false,
-  "image": "product_44.jpg",
-  "clasificacion": "seguridad"
- },
- {
-  "id": 45,
-  "name": "Mabuya spilogaster",
-  "price": 0,
-  "description": "consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet",
-  "descuento": false,
-  "image": "product_45.jpg",
-  "clasificacion": "trabajos con tension"
- },
- {
-  "id": 46,
-  "name": "Francolinus coqui",
-  "price": 0,
-  "description": "mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate",
-  "descuento": false,
-  "image": "product_46.jpg",
-  "clasificacion": "aparatos de testeo"
- },
- {
-  "id": 47,
-  "name": "Plegadis falcinellus",
-  "price": 0,
-  "description": "quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at",
-  "descuento": true,
-  "image": "product_47.jpg",
-  "clasificacion": "trabajos con tension"
- },
- {
-  "modelo": "FST402",
-  "description": "Este es un muy buen equipo de Puesta a Tierra :)",
-  "descriptionSeg": "Muy buen equipo :)",
-  "foto": "foto-1591565429093.png",
-  "id": 49
- },
- {
-  "modelo": "FST402",
-  "description": "Este es un muy buen equipo de Puesta a Tierra :)",
-  "descriptionSeg": "Muy buen equipo :)",
-  "foto": "foto-1591565441772.png",
-  "id": 50
- },
- {
-  "id": 13,
-  "name": "Falco mexicanus",
-  "price": "06666",
-  "description": "lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis",
-  "descuento": false,
-  "image": "product_13.jpg",
-  "clasificacion": "aparatos de testeo",
-  "modelo": "FST400",
-  "descriptionSeg": "descriptionSeg",
-  "foto": "foto-1591565744674.png"
+  "name": "Carrete",
+  "modelo": "CRT371",
+  "price": "0000",
+  "description": "FASTEN®\r\nCarrete completo para alojamiento y dispensamiento de cables de tierra de longitudes extensas.\r\nCARAS LATERALES: material Chapa Acero F24 – Tratamiento superficial cincado electrolítico\r\nCUERPO CENTRAL: material Caño Acero F24 – Tratamiento superficial cincado electrolítico\r\nCAPACIDADES DE ALOJAMIENTO (cables extraflexibles con cubierta de PVC): secciones 16-25mm² 15mt – sección 35mm² 12mt - sección 50mm² 8mt\r\nFUNCIONAL: extremo mango de maniobra y extremo de eje central aislados\r\nMORSETO DE PUESTA A TIERRA: morseto MCJ FASTEN® incorporado – Cuerpo de diseño funcional para ajuste de secciones hexagonal, redondo o cuadrado - fabricación en fundición de Bronce – Ajuste manual roscado terminal T – material Latón\r\n\r\n",
+  "descriptionSeg": "FASTEN® Carrete para alojamiento y dispensamiento de cables de tierra AT - MT - BT",
+  "foto": "foto-1592430050823.jpg",
+  "id": 54
  }
 ]

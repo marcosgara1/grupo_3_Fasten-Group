@@ -31,7 +31,7 @@ let controlador = {
             price: req.body.price,
             description: req.body.description,
             descriptionSeg: req.body.descriptionSeg,
-            clasificacion: req.body.familia,
+            clasificacion: req.body.clasificacion,
             foto : req.files[0].filename
         } 
 
@@ -72,6 +72,7 @@ let controlador = {
         product.name = req.body.name;
         product.modelo = req.body.modelo;
         product.price = req.body.price;
+        clasificacion = req.body.clasificacion,
         product.description = req.body.description;
         product.descriptionSeg = req.body.descriptionSeg;
         product.foto = req.files[0].filename;
