@@ -2,7 +2,9 @@ const userData = require('../models/user');
 const bcrypt = require('bcrypt');
 const { check, validationResult, body } = require('express-validator');
 
+
 let controlador = {
+
 
     formLogin: function (req, res) {
 
@@ -13,33 +15,19 @@ let controlador = {
 
         let errors = validationResult(req);
 
-        if (errors.isEmpty()){            
-            let users = userData.findAll(); 
-            let usuarioALoguearse;           
-            for (let i = 0; i < users.length; i++) {
-                if (users[i].email == req.body.email) {
-                    if (bcrypt.compareSync(req.body.password, users[i].password)){                        
-                        usuarioALoguearse = users[i];
-                        break;
-                    }
-                }
-            }
-
-            if (usuarioALoguearse == undefined) {
-                return res.render ('login', {errors: [
-                    {msg: 'Credenciales inválidas'}
-                ]});
-            }
-
-            req.session.usuarioLogueado = usuarioALoguearse;
-            
-            res.redirect('/products');
-
-        } else {
-
-            return res.render('login', { errors : errors.errors});
+        if (!errors.isEmpty()) {
+            return res.render('login', {errors: errors.mapped(), body: req.body});
         }
 
+        if (req.body.recordarme) {
+            res.cookie('recordarUsuario', req.body.email, {expires: new Date(Date.now()+ 1000*60*60*24*90)});
+        }
+
+       req.session.logeado = true;
+       res.locals.logeado = true;
+       req.session.userEmail = req.body.email;
+
+       return res.redirect('/');
     },
 
     formRegister: function (req, res) {
@@ -64,20 +52,39 @@ let controlador = {
 
             userData.create(user);
 
-            res.redirect('products'/*, { user : user }*/);
+            //req.locals.logeado = true;
+            req.session.logeado = true;
+            req.session.userEmail = user.email;
+
+
+            res.redirect('products');
 
         } else {
 
             res.render('register', { errors: errors.errors });
 
         }
+<<<<<<< HEAD
 
     profile : (req,res) => {
         return res.send(res.locals);
     }
 
     }
+=======
+    },
+>>>>>>> 032861d6c1d70d5b78c0a002d6dacfcce7ae9ade
 
+    profile : function (req, res) {
+        
+        let users = userData.findAll();
+
+       let user = users.find(function(usuario){
+           return req.params.id == usuario.id
+       });
+       
+        res.render('profile', { user : user });
+    }
 
 
 };

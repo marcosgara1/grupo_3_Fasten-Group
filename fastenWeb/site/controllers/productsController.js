@@ -1,4 +1,6 @@
 const productData = require('../models/product');
+const db = require('fasten_web.sql');
+
 
 let controlador = {
     index : function (req, res) {

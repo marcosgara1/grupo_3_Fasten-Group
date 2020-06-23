@@ -416,6 +416,7 @@
   "id": 58
  },
  {
+<<<<<<< HEAD
   "first_name": "Ailén",
   "last_name": "Vera",
   "email": "alenguadalupe@gmail.com",
@@ -432,5 +433,68 @@
   "c_password": "147852369",
   "foto": "foto-1592427259629.jpg",
   "id": 60
+=======
+  "first_name": "Louis",
+  "last_name": "Armstrong",
+  "email": "louis@armstrong.com",
+  "password": "$2b$10$WvcjbQYqrAVwuvwkNuhPduUBvLPsnYuFTyIJARbckLnj8qWnAG0aO",
+  "c_password": "12345678",
+  "foto": "foto-1592346588538.jpg",
+  "id": 59
+ },
+ {
+  "first_name": "liam",
+  "last_name": "neeson",
+  "email": "liam@neeson.com",
+  "password": "$2b$10$UXEsxm24JFB9GNXAPu3IJuPwy4wO177S4V0a0exZN3kHtzxi9NqTK",
+  "c_password": "12345678",
+  "foto": "foto-1592757014930.jpg",
+  "id": 60
+ },
+ {
+  "first_name": "John",
+  "last_name": "Rambo",
+  "email": "john@rambo.com",
+  "password": "$2b$10$GZQw4QxQEXI0ZXQZpVaV0.jL7RV8eEHooe9D2PkXECJ81IhNbBKN6",
+  "c_password": "12345678",
+  "foto": "foto-1592763675859.jpg",
+  "id": 61
+ },
+ {
+  "first_name": "Chuck",
+  "last_name": "Norris",
+  "email": "chuck@norris.com",
+  "password": "$2b$10$bL0wSpdMvrdTB./MWGgMmedlPhSqhbME6AOWQUgG0LdUUbyz.jn82",
+  "c_password": "12345678",
+  "foto": "foto-1592764387923.jpg",
+  "id": 62
+ },
+ {
+  "first_name": "Darth ",
+  "last_name": "Vader",
+  "email": "darth@vader.com",
+  "password": "$2b$10$7.LD.iCg7jaY0D1Sn0GK7ODF9SUNLVRqoZ1.XQBQc6hDmsFAmA9.G",
+  "c_password": "12345678",
+  "foto": "foto-1592764593417.jpg",
+  "id": 63
+ },
+ {
+  "first_name": "Morty",
+  "last_name": "Smith",
+  "email": "morty@smith.com",
+  "password": "$2b$10$ZWVMbDIE8QrDR1LxsliP2.mJXoFtvgHd81qmk4IbxxVmplYh9gMVW",
+  "c_password": "12345678",
+  "foto": "foto-1592766200008.jpg",
+  "id": 64
+ },
+ {
+  "first_name": "Rick",
+  "last_name": "Sanchez",
+  "email": "rick@sanchez.com",
+  "password": "$2b$10$iFR77VIN1QD/K4Mk0efRSeybWIbMvbB/AxQAiRLGZO7AlQXR1rB7O",
+  "c_password": "12345678",
+  "foto": "foto-1592772606397.jpg",
+  "id": 65
+>>>>>>> 032861d6c1d70d5b78c0a002d6dacfcce7ae9ade
  }
 ]

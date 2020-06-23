@@ -25,19 +25,25 @@ const usersController = require('../controllers/usersController');
 const { confirmPassword } = require('../models/user');
 
 
-router.get('/login', /*guestMiddleware,*/ usersController.formLogin);
+router.get('/login', authMiddleware, usersController.formLogin);
 
-router.post('/login', [
+router.post('/login', authMiddleware, [
 
   check('email').isEmail().withMessage('Email inválido'),
 
-  check('password').isLength({min: 8}).withMessage('La contraseña debe poseer al menos 8 caracteres'),
+  check('password').isLength({ min: 8 }).withMessage('La contraseña debe poseer al menos 8 caracteres'),
 
-],usersController.processLogin)
+], usersController.processLogin)
 
+<<<<<<< HEAD
 router.get('/register', guestMiddleware, usersController.formRegister);
 
 router.post('/register', upload.single('avatar'), [
+=======
+router.get('/register', authMiddleware, usersController.formRegister);
+
+router.post('/', upload.any('foto'), authMiddleware, [
+>>>>>>> 032861d6c1d70d5b78c0a002d6dacfcce7ae9ade
 
   check('first_name').isLength({ min: 1 }).withMessage('Este campo debe estar completo'),
 
@@ -52,6 +58,7 @@ router.post('/register', upload.single('avatar'), [
     })
   }),
 
+<<<<<<< HEAD
   check('password').isLength({ min: 8 }).withMessage('La contraseña debe poseer al menos 8 caracteres'),
 
   body('c_password').custom((value,{req, loc, path}) => {
@@ -65,5 +72,28 @@ router.post('/register', upload.single('avatar'), [
 ], usersController.register);
 
 router.get('/profile', authMiddleware, controller.profile)
+=======
+  body('email').custom(function (value) {
+
+    let users = userData.findAll();
+    for (let i = 0; i < users.length; i++) {
+      if (users[i].email == value) {
+        return false;
+      }
+    }
+    return true;
+  }).withMessage('El email ya está registrado'),
+
+  check('password').isLength({ min: 8 }).withMessage('La contraseña debe poseer al menos 8 caracteres'),
+
+  check('password', 'Las contraseñas deben coincidir')
+    .custom((value, { req }) => {
+      return value === req.body.c_password
+    }),
+
+], usersController.register);
+
+//router.get('/:id', usersController.profile);
+>>>>>>> 032861d6c1d70d5b78c0a002d6dacfcce7ae9ade
 
 module.exports = router;

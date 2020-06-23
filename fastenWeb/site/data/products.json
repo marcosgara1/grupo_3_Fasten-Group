@@ -1,5 +1,6 @@
 [
  {
+<<<<<<< HEAD
   "name": "Grapa de PATT",
   "modelo": "CT364",
   "price": "0000",
@@ -34,5 +35,103 @@
   "descriptionSeg": "FASTEN® Carrete para alojamiento y dispensamiento de cables de tierra AT - MT - BT",
   "foto": "foto-1592430050823.jpg",
   "id": 54
+=======
+  "id": 40,
+  "name": "Kobus defassa",
+  "price": 0,
+  "description": "consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo",
+  "descuento": false,
+  "image": "product_40.jpg",
+  "clasificacion": "trabajos con tension"
+ },
+ {
+  "id": 41,
+  "name": "Neophoca cinerea",
+  "price": 0,
+  "description": "in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur",
+  "descuento": true,
+  "image": "product_41.jpg",
+  "clasificacion": "seguridad"
+ },
+ {
+  "id": 42,
+  "name": "Felis silvestris lybica",
+  "price": 0,
+  "description": "magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum",
+  "descuento": false,
+  "image": "product_42.jpg",
+  "clasificacion": "trabajos con tension"
+ },
+ {
+  "id": 43,
+  "name": "Connochaetus taurinus",
+  "price": 0,
+  "description": "sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi",
+  "descuento": true,
+  "image": "product_43.jpg",
+  "clasificacion": "aparatos de testeo"
+ },
+ {
+  "id": 44,
+  "name": "Felis silvestris lybica",
+  "price": 0,
+  "description": "est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in",
+  "descuento": false,
+  "image": "product_44.jpg",
+  "clasificacion": "seguridad"
+ },
+ {
+  "id": 45,
+  "name": "Mabuya spilogaster",
+  "price": 0,
+  "description": "consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet",
+  "descuento": false,
+  "image": "product_45.jpg",
+  "clasificacion": "trabajos con tension"
+ },
+ {
+  "id": 46,
+  "name": "Francolinus coqui",
+  "price": 0,
+  "description": "mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate",
+  "descuento": false,
+  "image": "product_46.jpg",
+  "clasificacion": "aparatos de testeo"
+ },
+ {
+  "id": 47,
+  "name": "Plegadis falcinellus",
+  "price": 0,
+  "description": "quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at",
+  "descuento": true,
+  "image": "product_47.jpg",
+  "clasificacion": "trabajos con tension"
+ },
+ {
+  "modelo": "FST402",
+  "description": "Este es un muy buen equipo de Puesta a Tierra :)",
+  "descriptionSeg": "Muy buen equipo :)",
+  "foto": "foto-1591565429093.png",
+  "id": 49
+ },
+ {
+  "modelo": "FST402",
+  "description": "Este es un muy buen equipo de Puesta a Tierra :)",
+  "descriptionSeg": "Muy buen equipo :)",
+  "foto": "foto-1591565441772.png",
+  "id": 50
+ },
+ {
+  "id": 13,
+  "name": "Falco mexicanus",
+  "price": "06666",
+  "description": "lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis",
+  "descuento": false,
+  "image": "product_13.jpg",
+  "clasificacion": "aparatos de testeo",
+  "modelo": "FST400",
+  "descriptionSeg": "descriptionSeg",
+  "foto": "foto-1591565744674.png"
+>>>>>>> 032861d6c1d70d5b78c0a002d6dacfcce7ae9ade
  }
 ]

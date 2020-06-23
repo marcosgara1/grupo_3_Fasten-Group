@@ -16,6 +16,9 @@ var productCartRouter = require('./routes/productCart');
 var detalleRouter = require('./routes/detalle');
 var productsRouter = require('./routes/products');
 
+var sessionMiddleware = require('./middlewares/sessionMiddleware');
+var recordarmeMiddleware = require('./middlewares/recordarmeMiddleware');
+
 
 var app = express();
 
@@ -28,7 +31,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
-app.use (session({ secret: 'Secret!'}));
+app.use (session({ 
+  secret: 'Secret!',
+  resave: false,
+  saveUninitializaed: true 
+}));
+app.use(sessionMiddleware);
+app.use(recordarmeMiddleware);
 app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
