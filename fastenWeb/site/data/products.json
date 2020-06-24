@@ -27,15 +27,6 @@
   "clasificacion": "trabajos con tension"
  },
  {
-  "id": 43,
-  "name": "Connochaetus taurinus",
-  "price": 0,
-  "description": "sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi",
-  "descuento": true,
-  "image": "product_43.jpg",
-  "clasificacion": "aparatos de testeo"
- },
- {
   "id": 44,
   "name": "Felis silvestris lybica",
   "price": 0,

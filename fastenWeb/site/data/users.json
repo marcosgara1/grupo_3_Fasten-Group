@@ -477,5 +477,14 @@
   "c_password": "12345678",
   "foto": "foto-1592772606397.jpg",
   "id": 65
+ },
+ {
+  "first_name": "Rainier",
+  "last_name": "Wolfcastle",
+  "email": "mcbain@gmail.com",
+  "password": "$2b$10$5sPR8.o3i5sUiV48CG6MkOQYC6M3mWVTJW6WlnLBSgWm1qZp1/znW",
+  "c_password": "12345678",
+  "foto": "foto-1592835282608.jpg",
+  "id": 66
  }
 ]

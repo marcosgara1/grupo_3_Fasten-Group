@@ -52,8 +52,8 @@ let controlador = {
 
             userData.create(user);
 
-            //req.locals.logeado = true;
             req.session.logeado = true;
+            res.locals.logeado = true;
             req.session.userEmail = user.email;
 
 
@@ -68,13 +68,15 @@ let controlador = {
 
     profile : function (req, res) {
         
+        let user = req.session.userEmail;
+        
         let users = userData.findAll();
-
-       let user = users.find(function(usuario){
-           return req.params.id == usuario.id
+       
+       let userLogeado = users.find(function(usuario){
+           return user == usuario.email;
        });
        
-        res.render('profile', { user : user });
+        res.render('profile', { userLogeado : userLogeado });
     }
 
 };

@@ -62,8 +62,8 @@ router.post('/', upload.any('foto'), authMiddleware, [
       return value === req.body.c_password
     }),
 
-], usersController.register);
+    router.get('/profile', usersController.profile)
 
-//router.get('/:id', usersController.profile);
+], usersController.register);
 
 module.exports = router;
