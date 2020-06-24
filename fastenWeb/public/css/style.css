@@ -655,6 +655,26 @@ main div.registerForm p {
     font-size: 30px;
   }
 
+  /*style profile */
+
+  h2.bienvenide{
+    text-align: center;
+  }
+
+  div.profile{
+    margin-top: 20px;
+    margin: 20px;
+    margin-bottom: 500px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img.avatar{
+    margin-left: 350px;
+  }
+
+
+
   /*style carrito de productos */
 
 
