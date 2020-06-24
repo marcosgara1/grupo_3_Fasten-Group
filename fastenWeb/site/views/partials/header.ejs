@@ -32,12 +32,12 @@
                         <li><a href="/">Home</a></li>
                         
                         <% if (locals.logeado) { %>
-                            <li><a href="#">Perfil</a></li>
+                            <li><a href="users/profile">Perfil</a></li>
                             <li><a href="products/create">Nuevo</a></li>
                         <% }else { %>
                             <li><a href="/users/login">Login</a></li>
                         <% } %>
-                            <li><a href="productCart">Carrito</a></li>
+                            <li><a href="/products/productCart">Carrito</a></li>
                     </ul>
                 </div>
             </div>

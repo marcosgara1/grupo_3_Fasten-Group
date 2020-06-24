@@ -45,7 +45,7 @@ app.use('/users', usersRouter);
 //app.use('/formularioLogin', loginRouter);
 //app.use('/formularioRegistro', formularioRegistroRouter);
 app.use('/client', clientRouter);
-app.use('/productCart', productCartRouter);
+//app.use('/productCart', productCartRouter);
 app.use('/detalle', detalleRouter);
 app.use('/products', productsRouter);
 

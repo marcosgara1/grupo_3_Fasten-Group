@@ -416,30 +416,12 @@
   "id": 58
  },
  {
-<<<<<<< HEAD
   "first_name": "Ailén",
   "last_name": "Vera",
   "email": "alenguadalupe@gmail.com",
   "password": "$2b$10$fNc82yoz7TDXreYOZIHAFOYZ5vHHXraATDGWSsLBru4/ivIYje0La",
   "c_password": "xH2pujazx2c8SYS",
   "foto": "foto-1592426667549.jpg",
-  "id": 59
- },
- {
-  "first_name": "Yo",
-  "last_name": "Merengues",
-  "email": "yomen@yoyo.com",
-  "password": "$2b$10$zUE30YunMG3OXZsBcpqRz.WAhdH4chTFLkjrfsNdB5CE4f1N30cBu",
-  "c_password": "147852369",
-  "foto": "foto-1592427259629.jpg",
-  "id": 60
-=======
-  "first_name": "Louis",
-  "last_name": "Armstrong",
-  "email": "louis@armstrong.com",
-  "password": "$2b$10$WvcjbQYqrAVwuvwkNuhPduUBvLPsnYuFTyIJARbckLnj8qWnAG0aO",
-  "c_password": "12345678",
-  "foto": "foto-1592346588538.jpg",
   "id": 59
  },
  {
@@ -495,6 +477,14 @@
   "c_password": "12345678",
   "foto": "foto-1592772606397.jpg",
   "id": 65
->>>>>>> 032861d6c1d70d5b78c0a002d6dacfcce7ae9ade
+ },
+ {
+  "first_name": "Rainier",
+  "last_name": "Wolfcastle",
+  "email": "mcbain@gmail.com",
+  "password": "$2b$10$5sPR8.o3i5sUiV48CG6MkOQYC6M3mWVTJW6WlnLBSgWm1qZp1/znW",
+  "c_password": "12345678",
+  "foto": "foto-1592835282608.jpg",
+  "id": 66
  }
 ]

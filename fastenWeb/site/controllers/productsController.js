@@ -101,7 +101,12 @@ let controlador = {
         res.redirect('/products');
         
 
-    }    
+    },
+
+    cart : function (req, res) {
+
+        res.render('productCart');
+    }
 
 };
 
