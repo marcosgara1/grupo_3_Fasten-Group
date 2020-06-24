@@ -6,7 +6,7 @@ const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../config/config.js')[env];
-const db = require('D:\AV\DH\SPRINTS\grupo_3_Marquentin\grupo_3_Marquentin\fastenWeb/fasten_web.sql');
+const db = {}
 
 let sequelize;
 if (config.use_env_variable) {

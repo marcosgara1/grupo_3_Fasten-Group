@@ -8,6 +8,8 @@ const userData = require('../models/user');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 let logDBMiddleware = require
+const db = require('./../database/models')
+
 
 
 var storage = multer.diskStorage({
@@ -35,15 +37,9 @@ router.post('/login', authMiddleware, [
 
 ], usersController.processLogin)
 
-<<<<<<< HEAD
-router.get('/register', guestMiddleware, usersController.formRegister);
-
-router.post('/register', upload.single('avatar'), [
-=======
 router.get('/register', authMiddleware, usersController.formRegister);
 
 router.post('/', upload.any('foto'), authMiddleware, [
->>>>>>> 032861d6c1d70d5b78c0a002d6dacfcce7ae9ade
 
   check('first_name').isLength({ min: 1 }).withMessage('Este campo debe estar completo'),
 
@@ -51,28 +47,13 @@ router.post('/', upload.any('foto'), authMiddleware, [
 
   check('email').isEmail().withMessage('Debe ingresar un email válido')
   .custom(function(value){
-    return debugger.User.findOne({where : {email : value}}).then(user => {
+    return db.User.findOne({where : {email : value}}).then(user => {
       if(user != null){
         return Promise.reject('Este mail ya está registrado');
       }
     })
   }),
 
-<<<<<<< HEAD
-  check('password').isLength({ min: 8 }).withMessage('La contraseña debe poseer al menos 8 caracteres'),
-
-  body('c_password').custom((value,{req, loc, path}) => {
-    if (value !== req.body.password) {
-        return false;
-    } else {
-        return true;
-    }
-    }).withMessage('Los password deben coincidir')
-
-], usersController.register);
-
-router.get('/profile', authMiddleware, controller.profile)
-=======
   body('email').custom(function (value) {
 
     let users = userData.findAll();
@@ -94,6 +75,5 @@ router.get('/profile', authMiddleware, controller.profile)
 ], usersController.register);
 
 //router.get('/:id', usersController.profile);
->>>>>>> 032861d6c1d70d5b78c0a002d6dacfcce7ae9ade
 
 module.exports = router;

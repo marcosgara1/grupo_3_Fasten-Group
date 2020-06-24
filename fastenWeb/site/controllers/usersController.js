@@ -64,16 +64,12 @@ let controlador = {
             res.render('register', { errors: errors.errors });
 
         }
-<<<<<<< HEAD
 
     profile : (req,res) => {
         return res.send(res.locals);
     }
 
-    }
-=======
     },
->>>>>>> 032861d6c1d70d5b78c0a002d6dacfcce7ae9ade
 
     profile : function (req, res) {
         
