@@ -13,7 +13,7 @@ var usersRouter = require('./routes/users');
 var clientRouter = require('./routes/client');
 var productCartRouter = require('./routes/productCart');
 //var loginRouter = require('./routes/formularioLogin');
-var detalleRouter = require('./routes/detalle');
+//var detalleRouter = require('./routes/detalle');
 var productsRouter = require('./routes/products');
 
 var sessionMiddleware = require('./middlewares/sessionMiddleware');
@@ -46,7 +46,7 @@ app.use('/users', usersRouter);
 //app.use('/formularioRegistro', formularioRegistroRouter);
 app.use('/client', clientRouter);
 //app.use('/productCart', productCartRouter);
-app.use('/detalle', detalleRouter);
+//app.use('/detalle', detalleRouter);
 app.use('/products', productsRouter);
 
 

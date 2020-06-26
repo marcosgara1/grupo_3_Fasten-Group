@@ -713,3 +713,28 @@ main div.registerForm p {
     }
   }
 }
+
+/* Style perfil */
+
+section.perfil {
+  margin: 15px auto;
+  padding: 15px;
+}
+
+section.perfil div.datos-perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section.perfil div.bienvenidos h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 30px; 
+}
+
+section.perfil div.datos-perfil img {
+  
+}

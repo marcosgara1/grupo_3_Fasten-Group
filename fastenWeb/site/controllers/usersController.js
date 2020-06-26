@@ -27,7 +27,7 @@ let controlador = {
        res.locals.logeado = true;
        req.session.userEmail = req.body.email;
 
-       return res.redirect('/');
+       return res.redirect('profile');
     },
 
     formRegister: function (req, res) {
@@ -57,7 +57,7 @@ let controlador = {
             req.session.userEmail = user.email;
 
 
-            res.redirect('products');
+            res.redirect('profile');
 
         } else {
 

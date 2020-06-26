@@ -7,12 +7,21 @@
   <body>
     <%- include('./partials/header') %>    
     
-    <h2>Bienvenidux@e a tu perfil</h2>
-    <h1><%= userLogeado.first_name %></h1>
-    <h1><%= userLogeado.last_name %></h1>
-    <img src="../img/users/<%= userLogeado.foto %>" alt="foto del usuario" class="foto">
+  <main>
+    
+    <section class="perfil">
+      <div id="bienvenidos" class="bienvenidos">
+        <h1>Bienvenido/a a tu perfil</h2>
+      </div>
 
-
+      <div class="datos-perfil">
+        <h3><%= userLogeado.first_name %></h3>
+        <h3><%= userLogeado.last_name %></h3>
+        <h3><%= userLogeado.email %></h3>
+        <img src="../img/users/<%= userLogeado.foto %>" class="img-fluid img-thumbnail" alt="foto del usuario" class="foto">
+      </div>
+    </section>
+  </main>
 
     <%- include('./partials/footer') %>
 
