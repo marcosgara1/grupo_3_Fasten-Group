@@ -64,6 +64,11 @@ let controlador = {
             res.render('register', { errors: errors.errors });
 
         }
+
+    profile : (req,res) => {
+        return res.send(res.locals);
+    }
+
     },
 
     profile : function (req, res) {
@@ -78,6 +83,7 @@ let controlador = {
        
         res.render('profile', { userLogeado : userLogeado });
     }
+
 
 };
 

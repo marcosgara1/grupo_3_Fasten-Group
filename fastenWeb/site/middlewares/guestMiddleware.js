@@ -1,9 +1,11 @@
 function guestMiddleware (req, res, next) {
-    if (!req.session.logeado) {
-       return res.redirect('/users/login');
+    if (req.session.usuarioLogueado) {
+        return res.redirect('/profile');
+    } else {
+        return res.redirect('/users/login');
     }
+        next();
+    } 
 
-    next();
-}
 
 module.exports = guestMiddleware;

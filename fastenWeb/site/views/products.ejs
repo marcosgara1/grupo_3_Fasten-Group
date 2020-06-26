@@ -10,40 +10,40 @@
 
         <div class="list">
 
-            <% for (let i = 0; i < products.length; i++) { %>
+            <% products.forEach (function(){
 
-            <div class="productos">
+                <div class="productos">
 
-                <<img src="../img/productos/<%= products[i].foto %>" alt="foto del producto" class="foto">
+                    <<img src="../img/productos/<%= products[i].foto %>" alt="foto del producto" class="foto">
+    
+                        <h2><%= products[i].name %></h2>
+    
+                        <h3><%= products[i].price %></h3>
+    
+                        <p class="descripcion"><%= products[i].descriptionSeg%></p>
+    
+                        <p class="clasificacion"><%= products[i].clasificacion%></p>
+    
+                        <div class="botones">
+    
+                            <a href="/products/<%= products[i].id %>"><i class="fas fa-info-circle"></i></a>
+    
+                            <a href="/products/<%= products[i].id %>/edit"><i class="fas fa-pen-square"></i></a>
+    
+                           <form method="POST" action="/products/<%= products[i].id %>?_method=DELETE" enctype="multipart/form-data">
+    
+                                <button type="submit"><i class="fas fa-trash"></i></button>
+                            
+                            </form> 
+    
+                        </div>  
+    
+    
+                </div>
 
-                    <h2><%= products[i].name %></h2>
+            }) { %>
 
-                    <h3><%= products[i].price %></h3>
-
-                    <p class="descripcion"><%= products[i].descriptionSeg%></p>
-
-                    <p class="clasificacion">Clasificación: <%= products[i].clasificacion%></p>
-
-                    <div class="botones">
-
-                        <a href="/products/<%= products[i].id %>"><i class="fas fa-info-circle"></i></a>
-
-                        <a href="/products/<%= products[i].id %>/edit"><i class="fas fa-pen-square"></i></a>
-
-                       <form method="POST" action="/products/<%= products[i].id %>?_method=DELETE" enctype="multipart/form-data">
-
-                            <button type="submit"><i class="fas fa-trash"></i></button>
-                        
-                        </form> 
-
-                    </div>
-
-
-
-            </div>
-
-            <% } %>
-
+            
         </div>
 
     </main>

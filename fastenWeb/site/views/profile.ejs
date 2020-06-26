@@ -6,13 +6,13 @@
   </head>
   <body>
     <%- include('./partials/header') %>    
+    <div class="profile">
+        <h2 class="bienvenide">Bienvenidux@e a tu perfil</h2>
+    <h1><%= userLogeado.first_name %></h1>
+    <h1><%= userLogeado.last_name %></h1>
+    <img class= 'avatar' src="../img/users/<%= userLogeado.foto %>" alt="foto del usuario" class="foto">
+    </div>
     
-  <main>
-    
-    <section class="perfil">
-      <div id="bienvenidos" class="bienvenidos">
-        <h1>Bienvenido/a a tu perfil</h2>
-      </div>
 
       <div class="datos-perfil">
         <h3><%= userLogeado.first_name %></h3>
