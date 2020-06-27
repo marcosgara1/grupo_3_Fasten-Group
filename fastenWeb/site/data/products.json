@@ -18,21 +18,13 @@
   "id": 53
  },
  {
-  "name": "Grapa de PATT",
-  "modelo": "CT3650",
-  "price": "0000",
-  "description": "FASTEN®\r\nGrapa de fase para líneas aéreas – Uso AT\r\nDiseño apto ajuste secciones redondas o rectas - Ajuste a tornillo\r\nRangos de conexión: \r\n- Secciones redondas Cu Ø MIN 10mm – Ø MAX 50mm \r\n- Secciones rectas: MIN 15mm - MAX 50mm\r\nConexión derivada tipo Fontenay – Rango de conexión derivada secciones de cable Cu MIN 50mm² - MAX 185mm² - Ajuste del conductor al cuerpo por bulón material Acero Inoxidable AISI314\r\nCUERPO: de recorrido plano apto ajuste secciones redondas o rectas – Diseño con anclaje para alojamiento de cabezal de pértiga de gancho retráctil - Fabricación en fundición de Aluminio – Tratamiento superficial granallado\r\nMORDAZA: de alta superficie de contacto – Fabricación en fundición de Bronce\r\nAJUSTE: a tornillo, rosca trapezoidal Ø19 – Terminación std bayoneta – Opciones a solicitud, ojal, cardan, T - Material Acero F24 – Tratamiento superficial cincado electrolítico – Torque de instalación 4daN\r\nFUNCIONAL: varilla de tope de aproximación a línea, para facilitar la acción de acercamiento a la línea eléctrica desde el trabajo a distancia – Barra de Acero Inoxidable AISI314\r\nCorriente de cortocircuito MAX Icc 40kA/seg\r\n",
-  "descriptionSeg": "FASTEN® Grapa de fase para líneas aéreas - AT",
-  "foto": "foto-1592429925478.jpg",
-  "id": 51
- },
- {
-  "name": "Carrete",
-  "modelo": "CRT371",
-  "price": "0000",
-  "description": "FASTEN®\r\nCarrete completo para alojamiento y dispensamiento de cables de tierra de longitudes extensas.\r\nCARAS LATERALES: material Chapa Acero F24 – Tratamiento superficial cincado electrolítico\r\nCUERPO CENTRAL: material Caño Acero F24 – Tratamiento superficial cincado electrolítico\r\nCAPACIDADES DE ALOJAMIENTO (cables extraflexibles con cubierta de PVC): secciones 16-25mm² 15mt – sección 35mm² 12mt - sección 50mm² 8mt\r\nFUNCIONAL: extremo mango de maniobra y extremo de eje central aislados\r\nMORSETO DE PUESTA A TIERRA: morseto MCJ FASTEN® incorporado – Cuerpo de diseño funcional para ajuste de secciones hexagonal, redondo o cuadrado - fabricación en fundición de Bronce – Ajuste manual roscado terminal T – material Latón\r\n\r\n",
-  "descriptionSeg": "FASTEN® Carrete para alojamiento y dispensamiento de cables de tierra AT - MT - BT",
-  "foto": "foto-1592430050823.jpg",
+  "name": "cerveza",
+  "modelo": "andes",
+  "price": "63",
+  "description": "cerveza roja andes origen",
+  "descriptionSeg": "cerveza roja andes origen",
+  "clasificacion": "Seguridad",
+  "foto": "foto-1593220338969.jpg",
   "id": 54
  }
 ]
