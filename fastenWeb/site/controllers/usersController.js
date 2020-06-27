@@ -84,7 +84,6 @@ let controlador = {
         res.render('profile', { userLogeado : userLogeado });
     }
 
-
 };
 
 module.exports = controlador;
