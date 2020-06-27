@@ -8,7 +8,7 @@ const userData = require('../models/user');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 let logDBMiddleware = require
-const db = require('./../database/models')
+//const db = require('./../database/models')
 
 
 

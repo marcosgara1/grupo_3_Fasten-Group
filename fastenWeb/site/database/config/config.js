@@ -1,3 +1,4 @@
+/*
 module.exports ={
   "development": {
     "username": "root",
@@ -24,3 +25,4 @@ module.exports ={
     "operatorsAliases": 0
   }
 }
+*/
