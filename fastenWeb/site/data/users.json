@@ -486,5 +486,14 @@
   "c_password": "12345678",
   "foto": "foto-1592835282608.jpg",
   "id": 66
+ },
+ {
+  "first_name": "Montgomery",
+  "last_name": "Burns",
+  "email": "monty@gmail.com",
+  "password": "$2b$04$REXraFgWgF.rOiq3lPIGxOHGAZ2pLj0AGCWWTEcR7m5n6pQUvbgh.",
+  "c_password": "12345678",
+  "foto": "foto-1593443664635.jpg",
+  "id": 67
  }
 ]

@@ -4,6 +4,6 @@ const router = express.Router();
 const productCartController = require('../controllers/productCartController');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 
-router.get('/', productCartController.productCart);
+router.get('/cart', guestMiddleware, productCartController.productCart);
 
 module.exports = router;

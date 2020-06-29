@@ -39,7 +39,7 @@ router.post('/login', authMiddleware, [
 
 router.get('/register', authMiddleware, usersController.formRegister);
 
-router.post('/', upload.any('foto'), authMiddleware, [
+router.post('/', authMiddleware,upload.any('foto'), [
 
   check('first_name').isLength({ min: 1 }).withMessage('Este campo debe estar completo'),
 
@@ -65,8 +65,8 @@ router.post('/', upload.any('foto'), authMiddleware, [
       return value === req.body.c_password
     }),
 
-    router.get('/profile', usersController.profile)
-
 ], usersController.register);
+
+router.get('/profile', usersController.profile)
 
 module.exports = router;

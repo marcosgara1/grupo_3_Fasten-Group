@@ -33,7 +33,7 @@ router.put('/:id', guestMiddleware, upload.any('foto'),productsController.edit);
 
 router.delete('/:id', guestMiddleware, productsController.delete);
 
-router.get('/productCart', guestMiddleware, productsController.cart);
+router.get('/cart', guestMiddleware, productsController.cart);
 
 
 
