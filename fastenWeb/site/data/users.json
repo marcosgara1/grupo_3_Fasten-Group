@@ -495,5 +495,23 @@
   "c_password": "12345678",
   "foto": "foto-1593443664635.jpg",
   "id": 67
+ },
+ {
+  "first_name": "Roberto Fabian",
+  "last_name": "Ayala",
+  "email": "raton@gmail.com",
+  "password": "$2b$04$S8fPR72VnOwlT4sORZeb8.8w/.8L.JG9x59mRVD7G9I.kiBA7xwNS",
+  "c_password": "12345678",
+  "foto": "foto-1593542054151.jpg",
+  "id": 68
+ },
+ {
+  "first_name": "Walter Adrian",
+  "last_name": "Samuel",
+  "email": "elmuro@gmail.com",
+  "password": "$2b$04$1Hxixww/EyYrVz0NbYRTD.5om7F6SogQohrFko3jDUX4/5VG5gmTG",
+  "c_password": "12345678",
+  "foto": "foto-1593542147591.jpg",
+  "id": 69
  }
 ]

@@ -57,7 +57,7 @@ let controlador = {
             req.session.userEmail = user.email;
 
 
-            res.redirect('profile');
+            res.redirect('users/profile');
 
         } else {
 
