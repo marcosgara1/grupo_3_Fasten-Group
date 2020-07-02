@@ -513,5 +513,13 @@
   "c_password": "12345678",
   "foto": "foto-1593542147591.jpg",
   "id": 69
+ },
+ {
+  "first_name": "Gabriel Omar",
+  "last_name": "Batistuta",
+  "email": "batigol@gmail.com",
+  "password": "$2b$04$Kagcrbk8wMODIQB3IpWmG.h4f4uJdOBwH.9Htz9lN4fS7yqPwU.uC",
+  "foto": "foto-1593699908829.jpg",
+  "id": 70
  }
 ]

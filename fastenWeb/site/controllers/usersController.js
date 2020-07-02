@@ -46,7 +46,6 @@ let controlador = {
                 last_name: req.body.last_name,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 2),
-                c_password: req.body.c_password,
                 foto: req.files[0].filename
             }
 
