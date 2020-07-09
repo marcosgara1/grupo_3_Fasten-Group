@@ -10,27 +10,27 @@
 
         <div class="list">
 
-            <% products.forEach (function(producto){ %>
+            <% products.forEach (function(products){ %>
 
                 <div class="productos">
 
-                    <img src="../img/productos/<%= producto.foto %>" alt="foto del producto" class="foto">
+                    <img src="../img/productos/<%= products.foto %>" alt="foto del producto" class="foto">
     
-                        <h2><%= producto.name %></h2>
+                        <h2><%= products.name %></h2>
     
-                        <h3><%= producto.price %></h3>
+                        <h3><%= products.price %></h3>
     
-                        <p class="descripcion"><%= producto.descriptionSeg%></p>
+                        <p class="descripcion"><%= products.descriptionSeg%></p>
     
-                        <p class="clasificacion"><%= producto.clasificacion%></p>
+                        <!--<p class="clasificacion"></p>-->
     
                         <div class="botones">
     
-                            <a href="/products/<%= producto.id %>"><i class="fas fa-info-circle"></i></a>
+                            <a href="/products/<%= products.id %>"><i class="fas fa-info-circle"></i></a>
     
-                            <a href="/products/<%= producto.id %>/edit"><i class="fas fa-pen-square"></i></a>
+                            <a href="/products/<%= products.id %>/edit"><i class="fas fa-pen-square"></i></a>
     
-                           <form method="POST" action="/products/<%= producto.id %>?_method=DELETE" enctype="multipart/form-data">
+                           <form method="POST" action="/products/<%= products.id %>?_method=DELETE" enctype="multipart/form-data">
     
                                 <button type="submit"><i class="fas fa-trash"></i></button>
                             

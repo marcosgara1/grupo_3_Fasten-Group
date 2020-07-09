@@ -1,12 +1,12 @@
-/*
 module.exports ={
   "development": {
     "username": "root",
     "password": null,
-    "database": "fasten_web",
+    "database": "fasten_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "operatorsAliases": 0
+    "operatorsAliases": 0,
+    "port": 3307
   },
   "test": {
     "username": "root",
@@ -25,4 +25,3 @@ module.exports ={
     "operatorsAliases": 0
   }
 }
-*/

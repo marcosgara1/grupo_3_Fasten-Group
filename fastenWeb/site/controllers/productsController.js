@@ -1,90 +1,108 @@
-const productData = require('../models/product');
-const db = require('../database/models/index');
+const {check, validationResult, body} = require('express-validator');
+const db = require('./../database/models');
+const { Op } = require('sequelize');
 
 
 let controlador = {
     index : function (req, res) {
 
-        let products = [];
-
         if (req.query.busqueda) {
 
-            products = productData.filterByName(req.query.busqueda);
+            db.Productos.findAll({
+                where: {
+                    name: {
+                        [Op.like]: '%' + req.query.busqueda + '%'
+                    }
+                },
+                order : [
+                    ['name', 'ASC']
+                ],
+                include: [{association: "clasificacion"}]
+            })
+
+            .then(function(products){
+                return res.render('products', { products : products });
+            })
+            .catch(function(error){
+                console.log(error);
+            })
         
         } else {
 
-            products = productData.findAll();
+            db.Productos.findAll({
+                order: [
+                    ['name', 'ASC']
+                ]
+                //include: [{association: 'clasificacion'}]
+            })
+            .then(function(products){
+                return res.render('products', { products : products })
+            })
+            .catch(function(error){
+                console.error(error);
+            });
         }
         
-        res.render('products', { products : products } );
     },
 
     formCreate : function (req, res) {
         
-        res.render('create');
+        return res.render('create');
     
     },
 
     create : function (req, res, next) {
 
-        let product = {
+        db.Productos.create({
             name: req.body.name,
             modelo: req.body.modelo,
             price: req.body.price,
             description: req.body.description,
             descriptionSeg: req.body.descriptionSeg,
-            clasificacion: req.body.clasificacion,
+            //clasificacion: req.body.clasificacion,
             foto : req.files[0].filename
-        } 
+        })
 
-        productData.create(product);
-
-        res.redirect('products');
+        return res.redirect('products')
         
     },
 
     detail : function (req, res) {
 
-       let products = productData.findAll();
-
-       let product = products.find(function(prod){
-           return req.params.id == prod.id
-       });
-       
-        res.render('detail', { product : product });
+        db.Productos.findByPk(req.params.id/* {
+            /*include: [{association: "clasificacion"}]
+        }*/)
+            .then(function (products) {
+                console.log(products);
+                res.render('detail', { products: products });
+            })
 
     },
 
     formEdit : function (req, res) {
 
-        let prodId = req.params.id;
-
-        let productoEncontrado = productData.findByPK(prodId);
-
-        res.render('edit', { product : productoEncontrado});
-
+        db.Productos.findByPk(req.params.id)
+            .then(function(products){
+                res.render('edit', { products: products });
+            })
+        
     },
 
     edit : function (req, res) {
 
-        let prodId = req.params.id;
-        
-        let product = productData.findByPK(prodId);
-
-        product.name = req.body.name;
-        product.modelo = req.body.modelo;
-        product.price = req.body.price;
-        clasificacion = req.body.clasificacion,
-        product.description = req.body.description;
-        product.descriptionSeg = req.body.descriptionSeg;
-        product.foto = req.files[0].filename;
-
-        if (req.file) {
-            
-            product.foto = req.file.path.replace('public/', '/');
-        }
-
-        productData.update(product);        
+        db.Producto.update({
+            name: req.body.name,
+            modelo: req.body.modelo,
+            price: req.body.price,
+            description: req.body.description,
+            descriptionSeg: req.body.descriptionSeg,
+            clasificacion_id: req.body.clasificacion,
+            foto : req.files[0].filename
+        }, {
+            where: {
+                id: req.params.id
+            }
+        })
 
         res.redirect('/products');
 
@@ -92,15 +110,14 @@ let controlador = {
 
     delete : function (req, res) {
 
-        let prodId = req.params.id;
-        
-        let product = productData.findByPK(prodId);
+        db.Productos.destroy({
+            where: {
+                id: req.params.id
+            }
+        });
 
-        productData.delete(product.id); 
-        
         res.redirect('/products');
         
-
     },
 
     cart : function (req, res) {
