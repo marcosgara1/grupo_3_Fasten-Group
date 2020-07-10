@@ -59,7 +59,7 @@ let controlador = {
             price: req.body.price,
             description: req.body.description,
             descriptionSeg: req.body.descriptionSeg,
-            //clasificacion: req.body.clasificacion,
+            clasificacion_id: req.body.clasificacion,
             foto : req.files[0].filename
         })
 
