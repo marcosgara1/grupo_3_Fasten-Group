@@ -1,6 +1,8 @@
 const userData = require('../models/user');
 const bcrypt = require('bcrypt');
 const { check, validationResult, body } = require('express-validator');
+const db = require('../database/models');
+const { Op } = require('sequelize');
 
 
 let controlador = {
@@ -37,9 +39,49 @@ let controlador = {
 
     register: function (req, res) {
 
-        let errors = validationResult(req);
+        let validation = validationResult(req);
 
-        if (errors.isEmpty()) {
+        if(!validation.isEmpty()){
+            return res.render('users/register', {errors: validation.mapped(), body: req.body} );
+        }
+
+        let foto = '';
+
+        if(req.file){
+            foto = req.file.path.replace('public/', '/');
+        }
+
+        let client = {
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password, 2),
+            foto: foto
+        }
+
+        db.Cliente.create(client)
+            .then(function(user){
+
+                if (req.body.recordarme) {
+                    res.cookie('recordarUsuario', req.body.email, {expires: new Date(Date.now()+ 1000*60*60*24*90)});
+                }
+        
+               req.session.logeado = true;
+               res.locals.logeado = true;
+               req.session.userEmail = req.body.email;
+
+                return res.redirect('/profile', {userLogeado: userLogeado});
+            })
+            .catch(function(errors){
+                console.log(errors);
+                return res.redirect('/register')
+            })
+
+
+
+
+
+        /*if (errors.isEmpty()) {
 
             let user = {
                 first_name: req.body.first_name,
@@ -66,21 +108,37 @@ let controlador = {
 
     profile : (req,res) => {
         return res.send(res.locals);
-    }
+    }*/
 
     },
 
     profile : function (req, res) {
-        
+        /*
         let user = req.session.userEmail;
         
-        let users = userData.findAll();
+        let users = db.findAll();
        
        let userLogeado = users.find(function(usuario){
            return user == usuario.email;
        });
        
-        res.render('profile', { userLogeado : userLogeado });
+        res.render('profile', { userLogeado : userLogeado });*/
+
+        let user = req.session.userEmail;
+
+        db.Cliente.findOne({
+            where: {
+                email :{
+                    [Op.like] : user
+                }
+            }
+        })
+            .then(function(userLogeado){
+                return res.render('profile', { userLogeado: userLogeado });
+            })
+            .catch(function(error){
+                console.log(error);
+            })
     }
 
 };

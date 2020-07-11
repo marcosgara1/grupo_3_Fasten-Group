@@ -12,7 +12,7 @@ let logDBMiddleware = require
 
 
 
-var storage = multer.diskStorage({
+/*var storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'public/img/users');
   },
@@ -21,7 +21,41 @@ var storage = multer.diskStorage({
   }
 })
 
-const upload = multer({ storage: storage });
+const upload = multer({ storage: storage });*/
+
+//configuro donde y como se van a llamar los archivos
+const storage = multer.diskStorage({
+  destination : (req, file, cb) => {
+      const folder = 'public/img/users';
+      //ojo debe de estar creada la carpeta en public
+      cb(null, folder);
+  },
+  filename : (req, file, cb) => {
+      //el nombre del archivo es interesante ya que debe ser un nombre unico y no reemplaze a otros archivos.
+      return cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+  }, 
+});
+
+const upload = multer({
+  storage: storage,
+  fileFilter: (req, file, cb) => {
+      const acceptedExtensions = ['.jpg', '.jpeg', '.png'];
+      const ext = path.extname(file.originalname);
+      if (acceptedExtensions.includes(ext)){
+          //si es correcto subo la imagen
+          cb(null, true);
+      } else {
+          //aqui guardo la imagen en el body
+          req.file = file;
+          //le digo que no la suba
+          cb(null, false);
+      }
+   }
+});
+
+
+
+
 
 const usersController = require('../controllers/usersController');
 const { confirmPassword } = require('../models/user');
@@ -67,6 +101,6 @@ router.post('/', authMiddleware,upload.any('foto'), [
 
 ], usersController.register);
 
-router.get('/profile', usersController.profile)
+router.get('/profile', guestMiddleware,usersController.profile)
 
 module.exports = router;

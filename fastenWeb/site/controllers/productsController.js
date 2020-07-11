@@ -62,8 +62,12 @@ let controlador = {
             clasificacion_id: req.body.clasificacion,
             foto : req.files[0].filename
         })
+            .then(function(product){
+                console.log(product);
+                res.redirect('/products');
+            })
 
-        return res.redirect('products')
+        //return res.redirect('/products')
         
     },
 
@@ -90,7 +94,7 @@ let controlador = {
 
     edit : function (req, res) {
 
-        db.Producto.update({
+        db.Productos.update({
             name: req.body.name,
             modelo: req.body.modelo,
             price: req.body.price,
