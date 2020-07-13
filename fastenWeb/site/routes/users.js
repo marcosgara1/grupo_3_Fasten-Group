@@ -73,7 +73,7 @@ router.post('/login', authMiddleware, [
 
 router.get('/register', authMiddleware, usersController.formRegister);
 
-router.post('/', authMiddleware,upload.any('foto'), [
+router.post('/', authMiddleware,upload.single('foto'), [
 
   check('first_name').isLength({ min: 1 }).withMessage('Este campo debe estar completo'),
 

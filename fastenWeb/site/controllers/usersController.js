@@ -48,8 +48,9 @@ let controlador = {
         let foto = '';
 
         if(req.file){
-            foto = req.file.path.replace('public/', '/');
+            foto = req.file.filename;
         }
+        console.log(req.file);
 
         let client = {
             first_name: req.body.first_name,
@@ -60,7 +61,7 @@ let controlador = {
         }
 
         db.Cliente.create(client)
-            .then(function(user){
+            .then(function(userLogueado){
 
                 if (req.body.recordarme) {
                     res.cookie('recordarUsuario', req.body.email, {expires: new Date(Date.now()+ 1000*60*60*24*90)});
@@ -70,7 +71,7 @@ let controlador = {
                res.locals.logeado = true;
                req.session.userEmail = req.body.email;
 
-                return res.redirect('/profile', {userLogeado: userLogeado});
+                return res.redirect('users/profile', {userLogeado: userLogeado});
             })
             .catch(function(errors){
                 console.log(errors);
