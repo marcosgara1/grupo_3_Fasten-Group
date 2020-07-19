@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Fasten</title>
-    <link rel='stylesheet' href='/css/style.css' />
-  </head>
-  <body>
-    <%- include('./partials/header') %>    
-    <div class="profile">
-        <h2 class="bienvenide">Bienvenidux@e a tu perfil</h2>
-    <h1><%= userLogeado.first_name %></h1>
-    <h1><%= userLogeado.last_name %></h1>
-    <img class= 'avatar' src="../img/users/<%= userLogeado.foto %>" alt="foto del usuario" class="foto">
-    </div>
-    
 
-      <div class="datos-perfil">
+<head>
+  <title>Fasten</title>
+  <link rel='stylesheet' href='/css/style.css' />
+</head>
+
+<body>
+  <%- include('./partials/header') %>
+  <section>
+    <div class="profile">
+      <h2 class="bienvenide">Bienvenidux@e a tu perfil</h2>
+      <h1><%= userLogeado.first_name %></h1>
+      <h1><%= userLogeado.last_name %></h1>
+      <img class='avatar img-fluid' src="../img/users/<%= userLogeado.foto %>" alt="foto del usuario">
+
+      <a href="/users/<%= userLogeado.id %>/formEditProfile"><i class="fas fa-pen-square"></i>Actualizá tu perfil</a>
+    </div>
+
+
+    <!--<div class="datos-perfil">
         <h3><%= userLogeado.first_name %></h3>
         <h3><%= userLogeado.last_name %></h3>
         <h3><%= userLogeado.email %></h3>
         <img src="../img/users/<%= userLogeado.foto %>" class="img-fluid img-thumbnail" alt="foto del usuario" class="foto">
-      </div>
-    </section>
+      </div>-->
+  </section>
   </main>
 
-    <%- include('./partials/footer') %>
+  <%- include('./partials/footer') %>
 
-  </body>
+</body>
+
 </html>

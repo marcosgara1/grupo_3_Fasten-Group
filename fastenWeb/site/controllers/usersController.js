@@ -18,18 +18,18 @@ let controlador = {
         let errors = validationResult(req);
 
         if (!errors.isEmpty()) {
-            return res.render('login', {errors: errors.mapped(), body: req.body});
+            return res.render('login', { errors: errors.mapped(), body: req.body });
         }
 
         if (req.body.recordarme) {
-            res.cookie('recordarUsuario', req.body.email, {expires: new Date(Date.now()+ 1000*60*60*24*90)});
+            res.cookie('recordarUsuario', req.body.email, { expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 90) });
         }
 
-       req.session.logeado = true;
-       res.locals.logeado = true;
-       req.session.userEmail = req.body.email;
+        req.session.logeado = true;
+        res.locals.logeado = true;
+        req.session.userEmail = req.body.email;
 
-       return res.redirect('profile');
+        return res.redirect('profile');
     },
 
     formRegister: function (req, res) {
@@ -41,13 +41,13 @@ let controlador = {
 
         let validation = validationResult(req);
 
-        if(!validation.isEmpty()){
-            return res.render('users/register', {errors: validation.mapped(), body: req.body} );
+        if (!validation.isEmpty()) {
+            return res.render('users/register', { errors: validation.mapped(), body: req.body });
         }
 
         let foto = '';
 
-        if(req.file){
+        if (req.file) {
             foto = req.file.filename;
         }
         console.log(req.file);
@@ -61,19 +61,19 @@ let controlador = {
         }
 
         db.Cliente.create(client)
-            .then(function(userLogueado){
+            .then(function (userLogueado) {
 
                 if (req.body.recordarme) {
-                    res.cookie('recordarUsuario', req.body.email, {expires: new Date(Date.now()+ 1000*60*60*24*90)});
+                    res.cookie('recordarUsuario', req.body.email, { expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 90) });
                 }
-        
-               req.session.logeado = true;
-               res.locals.logeado = true;
-               req.session.userEmail = req.body.email;
 
-                return res.redirect('users/profile', {userLogeado: userLogeado});
+                req.session.logeado = true;
+                res.locals.logeado = true;
+                req.session.userEmail = req.body.email;
+
+                return res.redirect('users/profile', { userLogeado: userLogeado });
             })
-            .catch(function(errors){
+            .catch(function (errors) {
                 console.log(errors);
                 return res.redirect('/register')
             })
@@ -113,7 +113,7 @@ let controlador = {
 
     },
 
-    profile : function (req, res) {
+    profile: function (req, res) {
         /*
         let user = req.session.userEmail;
         
@@ -129,17 +129,62 @@ let controlador = {
 
         db.Cliente.findOne({
             where: {
-                email :{
-                    [Op.like] : user
+                email: {
+                    [Op.like]: user
                 }
             }
         })
-            .then(function(userLogeado){
+            .then(function (userLogeado) {
                 return res.render('profile', { userLogeado: userLogeado });
             })
-            .catch(function(error){
+            .catch(function (error) {
                 console.log(error);
             })
+    },
+
+    formEditProfile: function (req, res) {
+
+
+
+        let user = req.session.userEmail;
+
+        db.Cliente.findOne({
+            where: {
+                email: {
+                    [Op.like]: user
+                }
+            }
+        })
+            .then(function (userLogeado) {
+                return res.render('formEditProfile', { userLogeado: userLogeado });
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+    },
+
+    editProfile: function (req, res) {
+
+        let user = req.session.userEmail;
+
+        let foto = '';
+
+        if (req.file) {
+            foto = req.file.filename;
+        }
+
+        db.Cliente.update({
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            //email: req.body.email,
+            password: bcrypt.hashSync(req.body.password, 2),
+            foto: foto
+        }, {
+            where: {
+                email: user
+            }
+        })
+        res.redirect('profile');
     }
 
 };

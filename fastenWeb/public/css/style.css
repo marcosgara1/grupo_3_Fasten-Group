@@ -674,9 +674,6 @@ div #recordarme {
     align-items: center;
   }
 
-  img.avatar{
-    margin-left: 350px;
-  }
 
 
 
@@ -765,4 +762,6 @@ section.perfil div.bienvenidos h1{
     text-align: center;
     font-size: 30px; 
 }
+
+section
 

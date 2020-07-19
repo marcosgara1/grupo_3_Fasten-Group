@@ -101,6 +101,10 @@ router.post('/', authMiddleware,upload.single('foto'), [
 
 ], usersController.register);
 
-router.get('/profile', guestMiddleware,usersController.profile)
+router.get('/profile', guestMiddleware,usersController.profile);
+
+router.get('/:userId/formEditProfile', usersController.formEditProfile);
+
+router.put('/:userId', upload.single('foto'),usersController.editProfile);
 
 module.exports = router;

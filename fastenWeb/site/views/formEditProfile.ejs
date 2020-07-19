@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <%- include('./partials/header') %>
+    
+    <main>
+
+        <h2>Edita tu perfil</h2>
+
+        <% if (typeof errors != 'undefined') { %>
+
+        <ul>
+
+            <% for (let i = 0; i < errors.length; i++) { %>
+
+            <li>
+
+                <%= errors[i].msg %>
+
+            </li>
+
+            <% } %>
+
+        </ul>
+
+        <% } %>
+
+        <div class="registerForm">
+
+            <form  method="POST" action="/users/<%= userLogeado.id %>?_method=PUT" enctype="multipart/form-data">
+
+                <div>
+                    <input type="text" id="nombre" name="first_name" placeholder="Nombre" value="<%=userLogeado.first_name%>">
+                </div>
+
+                <div>
+                    <input type="text" id="apellido" name="last_name" placeholder="Apellido" value="<%=userLogeado.last_name%>">
+                </div>
+
+                <!--<div>
+                    <input type="email" id="email" name="email" placeholder="E-mail">
+                </div>-->
+
+                <div>
+                    <input type="password" id="password" name="password" placeholder="Contraseña" value="<%=userLogeado.password %>">
+                </div>
+
+                <div>
+                    <input type="password" id="c_password" name="c_password" placeholder="Confirmar contraseña">
+                </div>
+
+                <div>
+                    <input type="file" name="foto">Agregar foto</button>
+                </div>
+
+                <div>
+
+                    <button type="button submit" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                        Actualizar
+                    </button>
+
+                </div>
+
+                <div>
+                    <input type="checkbox" name="recordarme" id="recordarme">
+                    <label for="recordarme">Recordarme</label>
+                </div>
+
+                <div>
+                    <p>¿Ya tenés una cuenta?</p>
+                    <a href="/users/login" class="linkRegistro">Iniciá sesión</a>
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <%- include('./partials/footer') %>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
