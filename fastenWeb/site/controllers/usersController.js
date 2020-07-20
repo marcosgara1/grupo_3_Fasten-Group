@@ -15,10 +15,12 @@ let controlador = {
 
     processLogin: function (req, res) {
 
-        let errors = validationResult(req);
+        let validation = validationResult(req)
+        console.log(validation.mapped());
 
-        if (!errors.isEmpty()) {
-            return res.render('login', { errors: errors.mapped(), body: req.body });
+        if (!validation.isEmpty()) {
+            //return res.send(validation.mapped());
+            return res.render('login', {errors : validation.mapped(), body : req.body});
         }
 
         if (req.body.recordarme) {
@@ -39,10 +41,12 @@ let controlador = {
 
     register: function (req, res) {
 
-        let validation = validationResult(req);
+        let validation = validationResult(req)
+        //console.log(validation.mapped());
 
         if (!validation.isEmpty()) {
-            return res.render('users/register', { errors: validation.mapped(), body: req.body });
+            //return res.send(validation.mapped());
+            return res.render('login', {errors : validation.mapped(), body : req.body});
         }
 
         let foto = '';
@@ -177,7 +181,6 @@ let controlador = {
             first_name: req.body.first_name,
             last_name: req.body.last_name,
             //email: req.body.email,
-            password: bcrypt.hashSync(req.body.password, 2),
             foto: foto
         }, {
             where: {

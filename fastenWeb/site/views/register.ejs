@@ -19,7 +19,7 @@
 
         <h2>Formulario de registro</h2>
 
-        <% if (typeof errors != 'undefined') { %>
+        <!--<% if (typeof errors != 'undefined') { %>
 
         <ul>
 
@@ -35,7 +35,7 @@
 
         </ul>
 
-        <% } %>
+        <% } %> --> 
 
         <div class="registerForm">
 
@@ -43,10 +43,11 @@
 
                 <div>
                     <input type="text" id="nombre" name="first_name" placeholder="Nombre">
+                    <div><%=errors.first_name ? errors.first_name.msg: ''%></div>
                 </div>
 
                 <div>
-                    <input type="text" id="apellido" name="last_name" placeholder="Apellido">
+                    <input type="text" id="apellido" name="last_name" placeholder="Apellido" >
                 </div>
 
                 <div>
