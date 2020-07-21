@@ -47,11 +47,24 @@ let controlador = {
 
     formCreate : function (req, res) {
         
-        return res.render('create');
+        return res.render('create', {errors : {}, body: {}});
     
     },
 
     create : function (req, res, next) {
+
+        let errors = validationResult(req);
+        console.log(errors.mapped());
+
+        if (!errors.isEmpty()) {
+            res.render('create', {errors : errors.mapped(), body: req.body});
+        }
+
+        let foto = '';
+
+        if (req.file) {
+            foto = req.file.filename;
+        }
 
         db.Productos.create({
             name: req.body.name,
@@ -60,14 +73,12 @@ let controlador = {
             description: req.body.description,
             descriptionSeg: req.body.descriptionSeg,
             clasificacion_id: req.body.clasificacion,
-            foto : req.files[0].filename
+            foto : foto
         })
             .then(function(product){
                 console.log(product);
                 res.redirect('/products');
             })
-
-        //return res.redirect('/products')
         
     },
 
@@ -78,7 +89,7 @@ let controlador = {
         }*/)
             .then(function (products) {
                 console.log(products);
-                res.render('detail', { products: products });
+                res.render('detail', { products: products, errors : {}, body: {} });
             })
 
     },
@@ -94,6 +105,19 @@ let controlador = {
 
     edit : function (req, res) {
 
+        let errors = validationResult(req);
+        console.log(errors.mapped());
+
+        if (!errors.isEmpty()) {
+            res.render('create', {errors : errors.mapped(), body: req.body});
+        }
+
+        let foto = '';
+
+        if (req.file) {
+            foto = req.file.filename;
+        }
+
         db.Productos.update({
             name: req.body.name,
             modelo: req.body.modelo,
@@ -101,7 +125,7 @@ let controlador = {
             description: req.body.description,
             descriptionSeg: req.body.descriptionSeg,
             clasificacion_id: req.body.clasificacion,
-            foto : req.files[0].filename
+            foto : foto
         }, {
             where: {
                 id: req.params.id
