@@ -10,17 +10,16 @@ let controlador = {
 
     formLogin: function (req, res) {
 
-        res.render('login');
+        res.render('login', {errors: {}, body: {}});
     },
 
     processLogin: function (req, res) {
 
-        let validation = validationResult(req)
-        console.log(validation.mapped());
+        let errors = validationResult(req);
+        console.log(errors.mapped());
 
-        if (!validation.isEmpty()) {
-            //return res.send(validation.mapped());
-            return res.render('login', {errors : validation.mapped(), body : req.body});
+        if (!errors.isEmpty()) {
+            res.render('login', {errors : errors.mapped(), body: req.body});
         }
 
         if (req.body.recordarme) {
@@ -36,17 +35,16 @@ let controlador = {
 
     formRegister: function (req, res) {
 
-        res.render('register');
+        res.render('register', {errors:{}, body: {}});
     },
 
     register: function (req, res) {
 
-        let validation = validationResult(req)
-        //console.log(validation.mapped());
+        let errors = validationResult(req);
+        console.log(errors.mapped());
 
-        if (!validation.isEmpty()) {
-            //return res.send(validation.mapped());
-            return res.render('login', {errors : validation.mapped(), body : req.body});
+        if (!errors.isEmpty()) {
+            res.render('register', {errors : errors.mapped(), body: req.body});
         }
 
         let foto = '';

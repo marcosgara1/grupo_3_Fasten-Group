@@ -19,43 +19,29 @@
 
         <h2>Formulario de registro</h2>
 
-        <!--<% if (typeof errors != 'undefined') { %>
-
-        <ul>
-
-            <% for (let i = 0; i < errors.length; i++) { %>
-
-            <li>
-
-                <%= errors[i].msg %>
-
-            </li>
-
-            <% } %>
-
-        </ul>
-
-        <% } %> --> 
-
+     
         <div class="registerForm">
 
             <form action="/users" method="POST" enctype="multipart/form-data">
 
                 <div>
-                    <input type="text" id="nombre" name="first_name" placeholder="Nombre">
-                    <div><%=errors.first_name ? errors.first_name.msg: ''%></div>
+                    <input type="text" id="nombre" name="first_name" placeholder="Nombre" value="<%= body.first_name ? body.first_name : ''%>">
+                    <div><%= errors.first_name ? errors.first_name.msg : ''%> </div>
                 </div>
 
                 <div>
-                    <input type="text" id="apellido" name="last_name" placeholder="Apellido" >
+                    <input type="text" id="apellido" name="last_name" placeholder="Apellido" value="<%= body.last_name ? body.last_name : ''%>">
+                    <div><%= errors.last_name ? errors.last_name.msg : ''%> </div>
                 </div>
 
                 <div>
-                    <input type="email" id="email" name="email" placeholder="E-mail">
+                    <input type="email" id="email" name="email" placeholder="E-mail" value="<%= body.email ? body.email : ''%>">
+                    <div><%= errors.email ? errors.email.msg : ''%> </div>
                 </div>
 
                 <div>
                     <input type="password" id="password" name="password" placeholder="Contraseña">
+                    <div><%= errors.password ? errors.password.msg : ''%> </div>
                 </div>
 
                 <div>
@@ -64,6 +50,7 @@
 
                 <div>
                     <input type="file" name="foto">Agregar foto</button>
+                    <div><%= errors.foto ? errors.foto.msg : ''%> </div>
                 </div>
 
                 <div>

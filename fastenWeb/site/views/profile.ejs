@@ -13,7 +13,7 @@
       <h2 class="bienvenide">Bienvenidux@e a tu perfil</h2>
       <h1><%= userLogeado.first_name %></h1>
       <h1><%= userLogeado.last_name %></h1>
-      <img class='avatar img-fluid' src="../img/users/<%= userLogeado.foto %>" alt="foto del usuario">
+      <img class='avatar img-fluid' src="/img/users/<%= userLogeado.foto %>" alt="foto del usuario">
 
       <a href="/users/<%= userLogeado.id %>/formEditProfile"><i class="fas fa-pen-square"></i>Actualizá tu perfil</a>
     </div>

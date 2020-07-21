@@ -3,20 +3,20 @@
     <%-include('./partials/header')%>
     <main>
 
-        <h2>Formulario de ingreso</h2>
+        <h2>Formulario de ingreso</h2>      
 
         <div class="registerForm">
 
             <form action="/users/login" method="POST">
 
                 <div>
-                    <input type="text" id="usuario" name="email" placeholder="Usuario o mail">
-                    <div><%=errors.email ? errors.email.msg : ''%></div>
+                    <input type="text" id="usuario" name="email" placeholder="Usuario o mail" value="<%= body.email ? body.email : ''%>">
+                    <div><%= errors.email ? errors.email.msg : ''%> </div>
                 </div> 
 
                 <div>
                     <input type="password" id="password" name="password" placeholder="Contraseña" >
-                    <div><%=errors.password ? errors.password.msg : ''%></div>
+                    <div><%= errors.password ? errors.password.msg : ''%> </div>
                 </div>
                 
                 <div>

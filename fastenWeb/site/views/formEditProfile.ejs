@@ -42,7 +42,7 @@
             <form  method="POST" action="/users/<%= userLogeado.id %>?_method=PUT" enctype="multipart/form-data">
 
                 <div>
-                    <img class='avatar img-fluid' src="../img/users/<%= userLogeado.foto %>" alt="foto del usuario">
+                    <img class='avatar img-fluid' src="/img/users/<%= userLogeado.foto %>" alt="foto del usuario">
                 </div>
 
                 <div>
@@ -52,10 +52,6 @@
                 <div>
                     <input type="text" id="apellido" name="last_name" placeholder="Apellido" value="<%=userLogeado.last_name%>">
                 </div>
-
-                <!--<div>
-                    <input type="email" id="email" name="email" placeholder="E-mail">
-                </div>-->
 
                 <div>
                     <input type="file" name="foto">Agregar foto</button>
@@ -67,16 +63,6 @@
                         Actualizar
                     </button>
 
-                </div>
-
-                <div>
-                    <input type="checkbox" name="recordarme" id="recordarme">
-                    <label for="recordarme">Recordarme</label>
-                </div>
-
-                <div>
-                    <p>¿Ya tenés una cuenta?</p>
-                    <a href="/users/login" class="linkRegistro">Iniciá sesión</a>
                 </div>
 
             </form>
