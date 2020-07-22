@@ -7,20 +7,20 @@
 
         <div class="registerForm">
 
-            <form action="/users/login" method="POST">
+            <form action="/users/login" method="POST" class="form-login" id="form-login">
 
                 <div>
-                    <input type="text" id="usuario" name="email" placeholder="Usuario o mail" value="<%= body.email ? body.email : ''%>">
-                    <div><%= errors.email ? errors.email.msg : ''%> </div>
+                    <input type="text" class="email <%= errors.email ? 'is-invalid' : '' %>" id="email" name="email" placeholder="Usuario o mail" value="<%= body.email ? body.email : ''%>">
+                    <div class="invalid-feedback"><%= errors.email ? errors.email.msg : ''%> </div>
                 </div> 
 
-                <div>
-                    <input type="password" id="password" name="password" placeholder="Contraseña" >
-                    <div><%= errors.password ? errors.password.msg : ''%> </div>
+                <div id="mostrar-pass">
+                    <input type="password" class="password <%= errors.password ? 'is-nvalid' : '' %>" id="password" name="password" placeholder="Contraseña" >
+                    <div class="invalid-feedback"><%= errors.password ? errors.password.msg : ''%> </div>
                 </div>
                 
                 <div>
-                    <button type="button submit" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                    <button type="button submit" class="btn btn-primary boton-login" id="boton-login" data-toggle="button" aria-pressed="false">
                         LOGIN
                     </button>
                 </div>        
@@ -42,6 +42,8 @@
     
     
     <%- include('./partials/footer') %>
+
+    <script src="/js/login.js"></script>
     
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

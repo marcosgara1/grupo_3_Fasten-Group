@@ -45,7 +45,7 @@ let controlador = {
 
         if (!errors.isEmpty()) {
             res.render('register', {errors : errors.mapped(), body: req.body});
-        }
+        } else {
 
         let foto = '';
 
@@ -80,7 +80,7 @@ let controlador = {
                 return res.redirect('/register')
             })
 
-
+        }
 
 
 

@@ -252,6 +252,14 @@ div #recordarme {
   flex-direction: row;
   justify-content: center;
 }
+
+form.form-login input.is-invalid {
+  border: solid 1px red;
+}
+
+form.form-register input.is-invalid {
+  border: solid 1px red;
+}
 /*formulario de registro de producto*/
 /*  
 .body {
@@ -762,6 +770,3 @@ section.perfil div.bienvenidos h1{
     text-align: center;
     font-size: 30px; 
 }
-
-section
-
