@@ -98,7 +98,7 @@ let controlador = {
 
         db.Productos.findByPk(req.params.id)
             .then(function(products){
-                res.render('edit', { products: products });
+                res.render('edit', { products: products, errors : {}, body: {}});
             })
         
     },

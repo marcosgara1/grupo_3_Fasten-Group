@@ -9,19 +9,19 @@
             <h2 class="tit">FORMULARIO DE CARGA DE PRODUCTO</h2>
             <div>
                 <h3> Nombre del producto </h3>
-               <input type="nombre" name="name" placeholder="Nombre" value="<%= body.name ? body.name : ''%>">
-               <div><%= errors.name ? errors.name.msg : ''%> </div>
+               <input type="nombre" class="<%= errors.name ? 'is-invalid' : '' %>" id="name" name="name" placeholder="Nombre" value="<%= body.name ? body.name : ''%>">
+               <div class="invalid-feedback"><%= errors.name ? errors.name.msg : ''%> </div>
             </div>
         
             <div>
                 <h3>Nomenclatura del modelo</h3>
-                <input type="nomenclatura" name="modelo" placeholder="Modelo" value="<%= body.modelo ? body.modelo : ''%>">
+                <input type="nomenclatura" class="<%= errors.modelo ? 'is-invalid' : '' %>" name="modelo" placeholder="Modelo" value="<%= body.modelo ? body.modelo : ''%>">
                 <div><%= errors.modelo ? errors.modelo.msg : ''%> </div>
             </div>
         
             <div>
                 <h3>Precio</h3>
-                <input type="precio" name="price" placeholder="Precio" value="<%= body.precio ? body.precio : ''%>">
+                <input type="precio" class="<%= errors.price ? 'is-invalid' : '' %>" name="price" placeholder="Precio" value="<%= body.precio ? body.precio : ''%>">
                 <div><%= errors.precio ? errors.precio.msg : ''%> </div>
             </div>
         
@@ -37,8 +37,8 @@
         
             <div>
                 <h3>Descripción</h3>
-                <textarea name="description" placeholder="Descripción" value="<%= body.description ? body.description : ''%>"></textarea>
-                <div><%= errors.description ? errors.description.msg : ''%> </div>   
+                <textarea name="description" id="description" class="<%= errors.description ? 'is-invalid' : '' %>" placeholder="Descripción" value="<%= body.description ? body.description : ''%>"></textarea>
+                <div class="invalid-feedback"><%= errors.description ? errors.description.msg : ''%> </div>   
             </div>
 
             <div>
@@ -60,6 +60,6 @@
     
     </div>
 <%- include('./partials/footer') %>
-
+<script src="/js/create.js"></script>
 </body>
 </html>

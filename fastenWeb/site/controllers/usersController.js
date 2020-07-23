@@ -82,50 +82,9 @@ let controlador = {
 
         }
 
-
-
-        /*if (errors.isEmpty()) {
-
-            let user = {
-                first_name: req.body.first_name,
-                last_name: req.body.last_name,
-                email: req.body.email,
-                password: bcrypt.hashSync(req.body.password, 2),
-                foto: req.files[0].filename
-            }
-
-            userData.create(user);
-
-            req.session.logeado = true;
-            res.locals.logeado = true;
-            req.session.userEmail = user.email;
-
-
-            res.redirect('users/profile');
-
-        } else {
-
-            res.render('register', { errors: errors.errors });
-
-        }
-
-    profile : (req,res) => {
-        return res.send(res.locals);
-    }*/
-
     },
 
     profile: function (req, res) {
-        /*
-        let user = req.session.userEmail;
-        
-        let users = db.findAll();
-       
-       let userLogeado = users.find(function(usuario){
-           return user == usuario.email;
-       });
-       
-        res.render('profile', { userLogeado : userLogeado });*/
 
         let user = req.session.userEmail;
 

@@ -7,7 +7,8 @@
 
         <form  method="POST" action="/products/<%= products.id %>?_method=PUT" enctype="multipart/form-data">
             <div>
-               <input type="nombre" name="name" placeholder="Nombre" value="<%= products.name %>">
+               <input type="nombre" class="<%= errors.name ? 'is-invalid' : '' %>" id="name" name="name" placeholder="Nombre" value="<%= products.name %>">
+               <div class="invalid-feedback"><%= errors.name ? errors.name.msg : ''%> </div>
             </div>
         
             <div>
@@ -29,7 +30,8 @@
             </div>
         
             <div>
-                <textarea name="description" placeholder="Descripción"><%= products.description %></textarea>    
+                <textarea name="description"  id="description" class="<%= errors.description ? 'is-invalid' : '' %>" placeholder="Descripción"><%= products.description %></textarea> 
+                <div class="invalid-feedback"><%= errors.description ? errors.description.msg : ''%> </div>   
             </div>
 
             <div>
@@ -51,6 +53,6 @@
     </div>
     
 <%- include('./partials/footer') %>
-
+<script src="/js/edit.js"></script>
 </body>
 </html>
