@@ -17,7 +17,7 @@
           <h1><%= userLogeado.last_name %></h1>
         </div>
         <% if(!userLogeado.foto){ %>
-          <img src="https://images.app.goo.gl/UPH9JeiTgqAKdVCS7">
+          <img src="/img/users/unnamed.jpg">
         <%} else {%>
           <img class='avatar img-fluid' src="/img/users/<%= userLogeado.foto %>" alt="foto del usuario">
         <%}%>

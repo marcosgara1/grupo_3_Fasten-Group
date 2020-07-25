@@ -146,7 +146,7 @@ let controlador = {
                 email: user
             }
         })
-        res.redirect('/profile');
+        res.redirect('users/profile');
     }
 
 };
