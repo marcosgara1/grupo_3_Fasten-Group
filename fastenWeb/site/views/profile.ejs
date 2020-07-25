@@ -16,7 +16,14 @@
           <h1><%= userLogeado.first_name %></h1>
           <h1><%= userLogeado.last_name %></h1>
         </div>
-        <img class='avatar img-fluid' src="/img/users/<%= userLogeado.foto %>" alt="foto del usuario">
+        <% if(!userLogeado.foto){ %>
+          <img src="https://images.app.goo.gl/UPH9JeiTgqAKdVCS7">
+        <%} else {%>
+          <img class='avatar img-fluid' src="/img/users/<%= userLogeado.foto %>" alt="foto del usuario">
+        <%}%>
+        
+
+        
 
         <div class="boton-editar">
           <a href="/users/<%= userLogeado.id %>/formEditProfile"><i class="fas fa-pen-square"></i>Actualizá tu

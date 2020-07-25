@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const { check, validationResult, body } = require('express-validator');
 const db = require('../database/models');
 const { Op } = require('sequelize');
+const { urlencoded } = require('express');
 
 
 let controlador = {
@@ -52,6 +53,7 @@ let controlador = {
         if (req.file) {
             foto = req.file.filename;
         }
+
         console.log(req.file);
 
         let client = {
@@ -73,7 +75,7 @@ let controlador = {
                 res.locals.logeado = true;
                 req.session.userEmail = req.body.email;
 
-                return res.redirect('users/profile', { userLogeado: userLogeado });
+                return res.redirect('/profile', { userLogeado: userLogeado });
             })
             .catch(function (errors) {
                 console.log(errors);
@@ -144,7 +146,7 @@ let controlador = {
                 email: user
             }
         })
-        res.redirect('profile');
+        res.redirect('/profile');
     }
 
 };
