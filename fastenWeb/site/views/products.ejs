@@ -22,7 +22,7 @@
     
                         <p class="descripcion"><%= products.descriptionSeg%></p>
     
-                        <!--<p class="clasificacion"></p>-->
+                        <p class="clasificacion"> <%= products.clasificacion.nombre %></p>
     
                         <div class="botones">
     
@@ -34,7 +34,9 @@
     
                                 <button type="submit"><i class="fas fa-trash"></i></button>
                             
-                            </form> 
+                            </form>
+
+                            <a href="#" class="btn btn-success buttonHeart" data-productId="<% products.id %> "><i class="far fa-heart"></i></a>
     
                         </div>  
     
@@ -48,7 +50,9 @@
 
     </main>
 
+    <script src="/js/productList.js"></script>
     <%- include('./partials/footer') %>
+
 
 </body>
 

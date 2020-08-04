@@ -15,6 +15,7 @@ var productCartRouter = require('./routes/productCart');
 //var loginRouter = require('./routes/formularioLogin');
 //var detalleRouter = require('./routes/detalle');
 var productsRouter = require('./routes/products');
+var apiUsersRouter = require('./routes/apiUsers');
 
 var sessionMiddleware = require('./middlewares/sessionMiddleware');
 var recordarmeMiddleware = require('./middlewares/recordarmeMiddleware');
@@ -48,6 +49,7 @@ app.use('/client', clientRouter);
 //app.use('/productCart', productCartRouter);
 //app.use('/detalle', detalleRouter);
 app.use('/products', productsRouter);
+app.use('/apiUsers', apiUsersRouter);
 
 
 // catch 404 and forward to error handler

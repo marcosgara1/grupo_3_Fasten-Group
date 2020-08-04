@@ -29,9 +29,11 @@
                 <label for="Clasificación">Clasificación</label>
                 <select name="clasificacion">
                     <option value="">-- Seleccionar --</option>
-                    <option value="1">Trabajos con tensión</option>
-                    <option value="2">Seguridad</option>
-                    <option value="3">Aparatos de testeo y medición</option>
+
+                    <% for (let clasi of clasificacion) { %>
+                        <option value="<%= clasi.id %>"><%= clasi.nombre %></option>
+                    <% } %>
+                   
                 </select>
             </div>
         

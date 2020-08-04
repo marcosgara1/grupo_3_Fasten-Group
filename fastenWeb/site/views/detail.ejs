@@ -9,7 +9,7 @@
 
         <div class="detail">
 
-            <img src="../img/productos/<%= products.foto %>" alt="foto del producto" class="foto img-fluid">
+            <img src="/img/productos/<%= products.foto %>" alt="foto del producto" class="foto img-fluid">
 
             <h2><%= products.name %></h2>
 
@@ -19,8 +19,12 @@
 
             <p><%= products.description %></p>
 
+            <p class = "descripcion">Descripción</p>
+
+            <p><%= products.descriptionSeg %></p>
+
             <p class="clasificacion">Clasificación:</p>
-            <p><%= products.clasificacion %></p>
+            <p><%= products.clasificacion.nombre %></p>
             <div class="botonesDetail">
 
                 <div>

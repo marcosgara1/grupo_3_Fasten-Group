@@ -32,8 +32,8 @@ let controlador = {
             db.Productos.findAll({
                 order: [
                     ['name', 'ASC']
-                ]
-                //include: [{association: 'clasificacion'}]
+                ],
+                include: [{association: 'clasificacion'}]
             })
             .then(function(products){
                 return res.render('products', { products : products })
@@ -45,9 +45,13 @@ let controlador = {
         
     },
 
-    formCreate : function (req, res) {
+    formCreate : async (req, res) => {
+
+        let clasificacion = await db.Clasificacion.findAll();
         
-        return res.render('create', {errors : {}, body: {}});
+        return res.render('create', {errors : {}, body: {}, clasificacion: clasificacion})
+        
+        
     
     },
 
@@ -77,30 +81,41 @@ let controlador = {
         })
             .then(function(product){
                 console.log(product);
-                res.redirect('/products');
+                return res.redirect('/products', );
             })
         
     },
 
     detail : function (req, res) {
 
-        db.Productos.findByPk(req.params.id/* {
-            /*include: [{association: "clasificacion"}]
-        }*/)
+        db.Productos.findByPk(req.params.id, {
+            include: [{association: "clasificacion"}]
+        })
             .then(function (products) {
                 console.log(products);
-                res.render('detail', { products: products, errors : {}, body: {} });
+                return res.render('detail', { products: products, errors : {}, body: {} });
             })
 
     },
 
-    formEdit : function (req, res) {
+    formEdit : (req, res) => {
 
-        db.Productos.findByPk(req.params.id)
+        let clasificacion = db.Clasificacion.findAll();
+
+        let products = db.Productos.findByPk(req.params.id);
+
+        Promise.all([clasificacion, products])
+        .then(function(respuesta){
+            return res.render('edit', {clasificacion: respuesta[0], products: respuesta[1],errors : {}, body: {}});
+        })
+        /*
+        db.Productos.findByPk(req.params.id, {
+            include: [{association: "clasificacion"}]
+        })
             .then(function(products){
                 res.render('edit', { products: products, errors : {}, body: {}});
             })
-        
+        */
     },
 
     edit : function (req, res) {
@@ -109,7 +124,7 @@ let controlador = {
         console.log(errors.mapped());
 
         if (!errors.isEmpty()) {
-            res.render('create', {errors : errors.mapped(), body: req.body});
+            res.render('edit', {errors : errors.mapped(), body: req.body});
         }
 
         let foto = '';
@@ -132,7 +147,7 @@ let controlador = {
             }
         })
 
-        res.redirect('/products');
+        return res.redirect('/products');
 
     },
 
@@ -144,13 +159,13 @@ let controlador = {
             }
         });
 
-        res.redirect('/products');
+        return res.redirect('/products');
         
     },
 
     cart : function (req, res) {
 
-        res.render('cart');
+        return res.render('cart');
     }
 
 };
