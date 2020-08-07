@@ -7,6 +7,10 @@ window.onload = () => {
 
     let campoDescripcion = formularioRegister.querySelector('#description');
 
+    let campoModelo = formularioRegister.querySelector('#modelo');
+
+    let campoPrice = formularioRegister.querySelector('#price');
+
     console.log(formularioRegister.elements);
 
    
@@ -27,6 +31,28 @@ window.onload = () => {
 
             mostrarError.innerText = 'El campo Nombre debe poseer al menos 5 caracteres';
 
+        }
+
+        if (campoModelo.value.length < 1) {
+            
+            ev.preventDefault();
+
+            campoModelo.classList.add('is-invalid');
+
+            let mostrarError = campoModelo.parentElement.querySelector('div.invalid-feeback');
+
+            mostrarError.innerText = 'El campo Modelo no puede estar vacío';
+        }
+
+        if(campoPrice.value.length < 1){
+
+            ev.preventDefault();
+
+            campoPrice.classList.add('is-invalid');
+
+            let mostrarError = campoPrice.parentElement.querySelector('div.invalid-feedback');
+            
+            mostrarError.innerText = 'El campo precio no puede estar vacío y debe ser numérico';
         }
 
 

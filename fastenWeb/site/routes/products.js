@@ -8,20 +8,10 @@ const authMiddleware = require('../middlewares/authMiddleware');
 const productsController = require('../controllers/productsController');
 const db = require('./../database/models');
 
-/*var storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, 'public/img/productos');
-    },
-    filename: function (req, file, cb) {
-      cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-    }
-  })
-   
-  const upload = multer({ storage: storage });*/
 
   const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-      const folder = 'public/img/users';
+      const folder = 'public/img/productos';
       cb(null, folder);
     },
     filename: (req, file, cb) => {
@@ -54,7 +44,9 @@ router.post('/', guestMiddleware, upload.single('foto'),
 [
   check('name').isLength({min: 5}).withMessage('El campo Nombre debe poseer al menos 5 caracteres'),
   check('modelo').isLength({min: 1}).withMessage('El campo Modelo no puede estar vacío'),
-  check('price').isInt({min: 0}).withMessage('El campo Precio debe ser numérico'),
+  check('price').isInt({min: 1}).withMessage('El campo Precio debe ser numérico'),
+  check('price').isLength({min: 1}).withMessage('El campo Precio no puede estar vacío'),
+  check('clasificacion').isNumeric().withMessage('Debe seleccionar una clasificación'),
   check('description').isLength({min: 20}).withMessage('El campo Descripción debe poseer al menos 20 caracteres'),
   body('foto').custom((value, {req})=>{
     if(req.file != undefined){

@@ -13,20 +13,20 @@
       <div class="datos-perfil">
         <h2 class="bienvenide">Bienvenida/o a tu perfil</h2>
         <div class="nombre-apellido">
-          <h1><%= userLogeado.first_name %></h1>
-          <h1><%= userLogeado.last_name %></h1>
+          <h1><%= locals.userLogeado.first_name %> <%= locals.userLogeado.id %> </h1>
+          <h1><%= locals.userLogeado.last_name %></h1>
         </div>
-        <% if(!userLogeado.foto){ %>
+        <% if(!locals.userLogeado.foto){ %>
           <img src="/img/users/unnamed.jpg">
         <%} else {%>
-          <img class='avatar img-fluid' src="/img/users/<%= userLogeado.foto %>" alt="foto del usuario">
+          <img class='avatar img-fluid' src="/img/users/<%= locals.userLogeado.foto %>" alt="foto del usuario">
         <%}%>
         
 
         
 
         <div class="boton-editar">
-          <a href="/users/<%= userLogeado.id %>/formEditProfile"><i class="fas fa-pen-square"></i>Actualizá tu
+          <a href="/users/<%= locals.userLogeado.id %>/formEditProfile"><i class="fas fa-pen-square"></i>Actualizá tu
             perfil</a>
         </div>
       </div>

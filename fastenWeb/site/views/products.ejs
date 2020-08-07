@@ -14,7 +14,7 @@
 
                 <div class="productos">
 
-                    <img src="../img/productos/<%= products.foto %>" alt="foto del producto" class="foto">
+                    <img src="/img/productos/<%=products.foto%>" alt="foto del producto" class="foto">
     
                         <h2><%= products.name %></h2>
     
@@ -35,9 +35,10 @@
                                 <button type="submit"><i class="fas fa-trash"></i></button>
                             
                             </form>
-
-                            <a href="#" class="btn btn-success buttonHeart" data-productId="<% products.id %> "><i class="far fa-heart"></i></a>
-    
+                            
+                            <form action="/users/addFavorite/<%= products.id %>" method="POST">
+                                <button type="submit"><a href="#" class="buttonHeart" data-productId="<%= products.id %>"><i class="far fa-heart"></i></a></button>
+                            </form>    
                         </div>  
     
     

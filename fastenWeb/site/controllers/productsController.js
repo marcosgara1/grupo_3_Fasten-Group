@@ -36,6 +36,7 @@ let controlador = {
                 include: [{association: 'clasificacion'}]
             })
             .then(function(products){
+                
                 return res.render('products', { products : products })
             })
             .catch(function(error){
@@ -49,7 +50,7 @@ let controlador = {
 
         let clasificacion = await db.Clasificacion.findAll();
         
-        return res.render('create', {errors : {}, body: {}, clasificacion: clasificacion})
+        return res.render('create', {errors : {}, body: {}, clasificacion})
         
         
     
@@ -81,7 +82,7 @@ let controlador = {
         })
             .then(function(product){
                 console.log(product);
-                return res.redirect('/products', );
+                return res.redirect('/products');
             })
         
     },
@@ -99,7 +100,7 @@ let controlador = {
     },
 
     formEdit : (req, res) => {
-
+        /*
         let clasificacion = db.Clasificacion.findAll();
 
         let products = db.Productos.findByPk(req.params.id);
@@ -107,19 +108,19 @@ let controlador = {
         Promise.all([clasificacion, products])
         .then(function(respuesta){
             return res.render('edit', {clasificacion: respuesta[0], products: respuesta[1],errors : {}, body: {}});
-        })
-        /*
+        })*/
+        
         db.Productos.findByPk(req.params.id, {
             include: [{association: "clasificacion"}]
         })
             .then(function(products){
                 res.render('edit', { products: products, errors : {}, body: {}});
             })
-        */
+        
     },
 
     edit : function (req, res) {
-
+        
         let errors = validationResult(req);
         console.log(errors.mapped());
 
@@ -148,6 +149,7 @@ let controlador = {
         })
 
         return res.redirect('/products');
+    
 
     },
 

@@ -43,7 +43,7 @@ module.exports = (sequelize, dataTypes) => {
             as: "clasificacion",
             foreignKey: "clasificacion_id"
         });
-
+        
         Products.belongsToMany(models.Cliente, {
             as: "client",
             through: "client_product",

@@ -1,8 +1,23 @@
-module.exports = (req, res, next) =>{
+const db = require('./../database/models');
+
+module.exports = async (req, res, next) => {
+    /*
     if (req.cookies['recordarUsuario']) {
 
         req.session.logeado = true;
         req.session.userEmail = req.cookies['recordarUsuario'];
+   }*/
+
+   if(req.cookies['recordarUsuario']) {
+       let userLogeado = await db.Cliente.findOne({
+           where: {
+               email: req.cookies['recordarUsuario']
+            }});
+
+            res.locals.logeado = true;
+            res.locals.userLogeado = userLogeado;
+            req.session.logeado = true;
+            req.session.userLogeado = userLogeado;
    }
 
    next();

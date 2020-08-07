@@ -15,25 +15,23 @@
         
             <div>
                 <h3>Nomenclatura del modelo</h3>
-                <input type="nomenclatura" class="<%= errors.modelo ? 'is-invalid' : '' %>" name="modelo" placeholder="Modelo" value="<%= body.modelo ? body.modelo : ''%>">
-                <div><%= errors.modelo ? errors.modelo.msg : ''%> </div>
+                <input type="nomenclatura" class="<%= errors.modelo ? 'is-invalid' : '' %>" id="modelo" name="modelo" placeholder="Modelo" value="<%= body.modelo ? body.modelo : ''%>">
+                <div class="invalid-feedback"><%= errors.modelo ? errors.modelo.msg : ''%> </div>
             </div>
         
             <div>
                 <h3>Precio</h3>
-                <input type="precio" class="<%= errors.price ? 'is-invalid' : '' %>" name="price" placeholder="Precio" value="<%= body.precio ? body.precio : ''%>">
-                <div><%= errors.precio ? errors.precio.msg : ''%> </div>
+                <input type="precio" class="<%= errors.price ? 'is-invalid' : '' %>" name="price" id="price" placeholder="Precio" value="<%= body.price ? body.price : ''%>">
+                <div class="invalid-feedback"><%= errors.price ? errors.price.msg : ''%> </div>
             </div>
         
             <div>
                 <label for="Clasificación">Clasificación</label>
                 <select name="clasificacion">
                     <option value="">-- Seleccionar --</option>
-
-                    <% for (let clasi of clasificacion) { %>
-                        <option value="<%= clasi.id %>"><%= clasi.nombre %></option>
-                    <% } %>
-                   
+                    <option value="1">Trabajos con tensión</option>
+                    <option value="2">Seguridad</option>
+                    <option value="3">Aparatos de testeo y medición</option>
                 </select>
             </div>
         

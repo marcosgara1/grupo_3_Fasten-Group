@@ -22,11 +22,11 @@
             <div>
                 <label for="Clasificación">Clasificación</label>
                 <select name="clasificacion">
+                
                     <option value="">-- Seleccionar --</option>
-                    <% for (let clasi of clasificacion) { %>
-                        <option value="<%= clasi.id %>"
-                        <%if (products.clasifiacion_id == clasi.id) {%> selected <% } %>><%= clasi.nombre %></option>
-                    <% } %>
+                    <option value="1">Trabajos con tensión</option>
+                    <option value="2">Seguridad</option>
+                    <option value="3">Aparatos de testeo y medición</option>
                 </select>
             </div>
         
@@ -37,16 +37,20 @@
 
             <div>
                 <h3>Descripción breve</h3>
-                <textarea class="segunda" name="descriptionSeg" placeholder="Descripción breve"></textarea>    
+                <textarea class="segunda" name="descriptionSeg" placeholder="Descripción breve">
+                    <%= products.descriptionSeg %>
+                </textarea>    
             </div>
 
             <div>
-                <img src="<%= products.foto %>" alt="">
-                <input type="file" name="foto">Agregar foto</button>
+                <div>
+                    <img src="/img/productos/<%=products.foto%>" class="img-fluid"  alt="">
+                </div>
+                <input type="file" name="foto" id="foto">Agregar foto</button>
             </div>
         
             <div>
-                <button type="submit" class="publicar">Publicar</button>
+                <button type="submit" class="publicar btn btn-primary">Publicar</button>
             </div>                       
             
         </form>

@@ -94,7 +94,26 @@ router.get('/profile', guestMiddleware, usersController.profile);
 
 router.get('/:userId/formEditProfile', usersController.formEditProfile);
 
-router.put('/:userId', upload.single('foto'), usersController.editProfile);
+router.put('/:userId', upload.single('foto'), [
+
+  check('first_name').isLength({min:2}).withMessage('El campo Nombre debe estar completo'),
+
+  check('last_name').isLength({min:2}).withMessage('El campo Apellido debe estar completo'),
+
+  body('foto').custom((value, {req})=>{
+    if(req.file != undefined){
+      const acceptedExtensions = ['.jpg', '.jpeg', '.png'];
+      const ext = path.extname(req.file.originalname)
+      return acceptedExtensions.includes(ext);
+    }
+    return false;
+  }).withMessage('La foto debe tener alguno de los siguientes formatos: JPG, JPEG, PNG'),
+
+] ,usersController.editProfile);
+
+router.post('/logout',usersController.logout);
+
+router.post('/addFavorite/:id', usersController.addFavorite);
 
 module.exports = router;
 

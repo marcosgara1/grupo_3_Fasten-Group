@@ -1,15 +1,19 @@
 window.addEventListener('load', function(){
     const buttonsHearts = document.querySelectorAll('.buttonHeart');
-
+    /*
     for (const boton of buttonsHearts) {
         boton.onclick = function() {
             const anclaje = this;
             const productId = this.getAttribute('data-productId');
+            const clientId = this.getAttribute('data-clientId');
             console.log(productId);
 
-            fetch('http://localhost:3000/apiUsers/addFavourite',{
+            fetch('http://localhost:3000/api/users/addFavorite',{
                 method: 'POST',
-                body: '',
+                body: JSON.stringify({
+                    userId: clientId,
+                    productId: productId,
+                }),
                 headers: {
                     'Content-type': 'application/json'
                 }
@@ -20,6 +24,15 @@ window.addEventListener('load', function(){
             .then(function(data){
                 console.log(data);
 
+                if(data.status == 401) {
+                    
+                    alert(data.response);
+
+                    return false
+                }
+
+                alert(data.response);
+
                 const i = anclaje.querySelector('i');
                 i.classList.toggle('far');
                 i.classList.toggle('fas');
@@ -28,5 +41,5 @@ window.addEventListener('load', function(){
                 console.error(error);
             });
         }
-    }
+    }*/
 })

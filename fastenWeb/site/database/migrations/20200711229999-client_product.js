@@ -1,5 +1,7 @@
 'use strict';
 
+const { DataTypes } = require("sequelize/types");
+
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('client_product', {
@@ -10,25 +12,11 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       client_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: {
-            tableName: 'client'
-          },
-          key: 'id'
-        },
-        allowNull: false
+        type: dataTypes.INTEGER
       },
-      product_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: {
-            tableName: 'product'
-          },
-          key: 'id'
-        },
-        allowNull: false
-      },
+      client_id: {
+        type: dataTypes.INTEGER
+      }
       });
   },
 

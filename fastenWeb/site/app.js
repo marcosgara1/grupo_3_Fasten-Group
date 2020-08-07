@@ -15,7 +15,8 @@ var productCartRouter = require('./routes/productCart');
 //var loginRouter = require('./routes/formularioLogin');
 //var detalleRouter = require('./routes/detalle');
 var productsRouter = require('./routes/products');
-var apiUsersRouter = require('./routes/apiUsers');
+var apiProductsRouter = require('./routes/api/products');
+var apiUsersRouter = require('./routes/api/users');
 
 var sessionMiddleware = require('./middlewares/sessionMiddleware');
 var recordarmeMiddleware = require('./middlewares/recordarmeMiddleware');
@@ -31,11 +32,12 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../public')));
+//app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(__dirname + '/../public'));
 app.use(session({ 
   secret: 'Secret!',
   resave: false,
-  saveUninitializaed: true,
+  saveUninitialized: true,
 }));
 app.use(sessionMiddleware);
 app.use(recordarmeMiddleware);
@@ -49,8 +51,8 @@ app.use('/client', clientRouter);
 //app.use('/productCart', productCartRouter);
 //app.use('/detalle', detalleRouter);
 app.use('/products', productsRouter);
-app.use('/apiUsers', apiUsersRouter);
-
+app.use('/api/products', apiProductsRouter);
+/*app.use('/api/users', apiUsersRouter);*/
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

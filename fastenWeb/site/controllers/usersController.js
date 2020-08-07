@@ -11,16 +11,16 @@ let controlador = {
 
     formLogin: function (req, res) {
 
-        res.render('login', {errors: {}, body: {}});
+        return res.render('login', {errors: {}, body: {}});
     },
 
     processLogin: function (req, res) {
 
         let errors = validationResult(req);
-        console.log(errors.mapped());
+        //console.log(errors.mapped());
 
         if (!errors.isEmpty()) {
-            res.render('login', {errors : errors.mapped(), body: req.body});
+            return res.render('login', {errors : errors.mapped(), body: req.body});
         }
 
         if (req.body.recordarme) {
@@ -36,16 +36,16 @@ let controlador = {
 
     formRegister: function (req, res) {
 
-        res.render('register', {errors:{}, body: {}});
+        return res.render('register', {errors:{}, body: {}});
     },
 
     register: function (req, res) {
 
         let errors = validationResult(req);
-        console.log(errors.mapped());
+        //console.log(errors.mapped());
 
         if (!errors.isEmpty()) {
-            res.render('register', {errors : errors.mapped(), body: req.body});
+            return res.render('register', {errors : errors.mapped(), body: req.body});
         } else {
 
         let foto = '';
@@ -54,7 +54,7 @@ let controlador = {
             foto = req.file.filename;
         }
 
-        console.log(req.file);
+        //console.log(req.file);
 
         let client = {
             first_name: req.body.first_name,
@@ -70,12 +70,20 @@ let controlador = {
                 if (req.body.recordarme) {
                     res.cookie('recordarUsuario', req.body.email, { expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 90) });
                 }
-
+                /*
                 req.session.logeado = true;
                 res.locals.logeado = true;
                 req.session.userEmail = req.body.email;
+                res.locals.userLogeado = userLogueado;
+                */
+                res.locals.logeado = true;
+                res.locals.userLogeado = userLogueado;
+                req.session.logeado = true;
+                req.session.userLogeado = userLogueado
 
-                return res.redirect('/profile', { userLogeado: userLogeado });
+                console.log(res.locals);
+
+                return res.redirect('/users/profile'/*, { userLogeado: userLogeado }*/);
             })
             .catch(function (errors) {
                 console.log(errors);
@@ -98,6 +106,10 @@ let controlador = {
             }
         })
             .then(function (userLogeado) {
+
+                console.log(req.session);
+                console.log('------------------');
+                console.log(res.locals);
                 return res.render('profile', { userLogeado: userLogeado });
             })
             .catch(function (error) {
@@ -106,8 +118,6 @@ let controlador = {
     },
 
     formEditProfile: function (req, res) {
-
-
 
         let user = req.session.userEmail;
 
@@ -146,8 +156,29 @@ let controlador = {
                 email: user
             }
         })
-        res.redirect('users/profile');
+        return res.redirect('/users/profile');
+    },
+
+    logout: function(req, res){
+        if(req.session){
+        let date = new Date(Date.now() - 100);
+        req.session.cookie.expires = date;
+        req.session.cookie.maxAge = -100;
     }
+    let expires = new Date(Date.now() - 1 );
+        res.cookie('recordarUsuario', '',  {expires: expires});
+        return res.redirect('users/login');
+    },
+
+    addFavorite: async (req, res) => {
+
+        db.ClientProduct.create({
+            client_id: req.session.userLogeado.id,
+            product_id: req.params.id
+        });
+
+        return res.redirect('/users/profile');
+    } 
 
 };
 

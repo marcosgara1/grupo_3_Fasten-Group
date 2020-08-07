@@ -546,7 +546,7 @@ form.form-register input.is-invalid {
     div.botones {
       font-size: 30px;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 20px;
     }
 
@@ -555,6 +555,7 @@ form.form-register input.is-invalid {
       align-items: flex-start;
       margin-bottom: 10px;
     }
+    
 
     div.botones form button {
       border: 0px;
