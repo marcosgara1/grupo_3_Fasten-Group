@@ -94,16 +94,18 @@ let controlador = {
 
     },
 
-    profile: function (req, res) {
-
-        let user = req.session.userEmail;
+    profile: (req, res) => {
+        
+        /*let user = req.session.userEmail;
 
         db.Cliente.findOne({
             where: {
                 email: {
                     [Op.like]: user
                 }
-            }
+            },
+            include : [{ association: "favoritos"
+            }]
         })
             .then(function (userLogeado) {
 
@@ -111,6 +113,25 @@ let controlador = {
                 console.log('------------------');
                 console.log(res.locals);
                 return res.render('profile', { userLogeado: userLogeado });
+            })
+            .catch(function (error) {
+                console.log(error);
+            })*/
+
+            let user = req.session.userEmail;
+
+        db.Cliente.findOne({
+            where: {
+                email: {
+                    [Op.like]: user
+                }
+            },
+            include : ["favoritos"]
+        })
+            .then(function (userLogeado) {
+
+                const productsFavorites = userLogeado.favoritos
+                return res.render('profile', { userLogeado: userLogeado, productsFavorites });
             })
             .catch(function (error) {
                 console.log(error);
@@ -178,7 +199,19 @@ let controlador = {
         });
 
         return res.redirect('/users/profile');
-    } 
+    },
+
+    removeFavorite: function (req, res) {
+
+        db.ClientProduct.destroy({
+            where: {
+                product_id: req.params.id,
+                client_id: req.session.userLogeado.id    
+            }
+        })
+
+        return res.redirect('/users/profile');
+    }
 
 };
 

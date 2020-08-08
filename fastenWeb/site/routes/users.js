@@ -115,6 +115,8 @@ router.post('/logout',usersController.logout);
 
 router.post('/addFavorite/:id', usersController.addFavorite);
 
+router.delete('/removeFavorite/:id', usersController.removeFavorite);
+
 module.exports = router;
 
 

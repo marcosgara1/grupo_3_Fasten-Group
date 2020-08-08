@@ -13,7 +13,7 @@
       <div class="datos-perfil">
         <h2 class="bienvenide">Bienvenida/o a tu perfil</h2>
         <div class="nombre-apellido">
-          <h1><%= locals.userLogeado.first_name %> <%= locals.userLogeado.id %> </h1>
+          <h1><%= locals.userLogeado.first_name %></h1>
           <h1><%= locals.userLogeado.last_name %></h1>
         </div>
         <% if(!locals.userLogeado.foto){ %>
@@ -28,6 +28,32 @@
         <div class="boton-editar">
           <a href="/users/<%= locals.userLogeado.id %>/formEditProfile"><i class="fas fa-pen-square"></i>Actualizá tu
             perfil</a>
+        </div>
+      </div>
+
+      <div class="favoritos">
+        <h3>Mis favoritos</h3>
+        <div class="lista-favoritos">
+          <% for(const product of productsFavorites) { %>
+
+            <div class="prod-favoritos">
+              <h5 id="nombre"><%= product.name %></h5>
+
+              <h5 id="modelo"><%= product.modelo %></h5>
+
+              <img class='foto img-fluid center' src="/img/productos/<%= product.foto %>" alt="foto del producto" width="150px" height="150px">
+
+              <div class="botones-perfil">
+
+                  <a href="/products/<%= product.id %>"><i class="fas fa-info-circle"></i></a>
+
+                  <form method="POST" action="/users/removeFavorite/<%= product.id %>?_method=DELETE" enctype="multipart/form-data">    
+                    <button type="submit"><i class="fas fa-trash"></i></button>
+                </form>
+                
+              </div>
+            </div>
+          <% } %>
         </div>
       </div>
 

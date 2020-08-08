@@ -9,35 +9,42 @@
 
         <div class="detail">
 
-            <img src="/img/productos/<%= products.foto %>" alt="foto del producto" class="foto img-fluid">
+            <div class="imagen">
+                <img src="/img/productos/<%= products.foto %>" alt="foto del producto" class="foto img-fluid">
+            </div>
 
-            <h2><%= products.name %></h2>
+            <div class="textos">
+                <h2><%= products.name %></h2>
 
-            <h3><%= products.price %></h3>
+                <h3>Precio: $ <%= products.price %></h3>
 
-            <p class = "descripcion">Descripción</p>
+                <p class ="subtitulo">Descripción:</p>
 
-            <p><%= products.description %></p>
+                <p><%= products.description %></p>
 
-            <p class = "descripcion">Descripción</p>
+                <p class ="subtitulo">Descripción:</p>
 
-            <p><%= products.descriptionSeg %></p>
+                <p><%= products.descriptionSeg %></p>
 
-            <p class="clasificacion">Clasificación:</p>
-            <p><%= products.clasificacion.nombre %></p>
-            <div class="botonesDetail">
+                <p class ="subtitulo">Clasificación:</p>
+                <p><%= products.clasificacion.nombre %></p>
+            </div>
 
-                <div>
+            <div class="botones">
+    
+                <a href="/products/<%= products.id %>"><i class="fas fa-info-circle"></i></a>
 
-                    <button type="button submit" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+                <a href="/products/<%= products.id %>/edit"><i class="fas fa-pen-square"></i></a>
 
-                        <a href="/products/<%= products.id %>/edit">Editar</a>
+               <form method="POST" action="/products/<%= products.id %>?_method=DELETE" enctype="multipart/form-data">
 
-                    </button>
-
-                </div>
-
-
+                    <button type="submit"><i class="fas fa-trash"></i></button>
+                
+                </form>
+                
+                <form action="/users/addFavorite/<%= products.id %>" method="POST">
+                    <button type="submit"><a href="#" class="buttonHeart" data-productId="<%= products.id %>"><i class="far fa-heart"></i></a></button>
+                </form>    
             </div>
 
 
