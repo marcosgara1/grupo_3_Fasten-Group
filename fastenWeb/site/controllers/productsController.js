@@ -100,15 +100,6 @@ let controlador = {
     },
 
     formEdit : (req, res) => {
-        /*
-        let clasificacion = db.Clasificacion.findAll();
-
-        let products = db.Productos.findByPk(req.params.id);
-
-        Promise.all([clasificacion, products])
-        .then(function(respuesta){
-            return res.render('edit', {clasificacion: respuesta[0], products: respuesta[1],errors : {}, body: {}});
-        })*/
         
         db.Productos.findByPk(req.params.id, {
             include: [{association: "clasificacion"}]

@@ -51,9 +51,9 @@ router.post('/login', authMiddleware, [
     .custom((value, {req})=>{
       return db.Cliente.findOne({where: {email: value}}).then(user => {
         if (user == null){
-          return Promise.reject('Credenciales inválidas');
+          return Promise.reject('El mail o la contraseña son incorrectos');
         } else if (user && !bcrypt.compareSync(req.body.password, user.password)) {
-          return Promise.reject('Credenciales inválidas');
+          return Promise.reject('El mail o la contraseña son incorrectos');
         }
       })
     }),
