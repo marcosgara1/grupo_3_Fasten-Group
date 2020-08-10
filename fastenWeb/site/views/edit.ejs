@@ -6,15 +6,18 @@
     <div class="productAdd">
 
         <form  method="POST" action="/products/<%= products.id %>?_method=PUT" enctype="multipart/form-data">
-            <div>
+            <label class="nombre" for="nombre">NOMBRE</label>
+            <div class="form-edit-nombre">
                <input type="nombre" class="<%= errors.name ? 'is-invalid' : '' %>" id="name" name="name" placeholder="Nombre" value="<%= products.name %>">
                <div class="invalid-feedback"><%= errors.name ? errors.name.msg : ''%> </div>
             </div>
         
+            <label class="modelo" for="modelo">MODELO</label>
             <div>
                 <input type="nomenclatura" name="modelo" placeholder="Modelo" value="<%= products.modelo %>">
             </div>
         
+            <label class="precio" for="price">PRECIO</label>
             <div>
                 <input type="precio" name="price" placeholder="Precio" value="<%= products.price %>">
             </div>

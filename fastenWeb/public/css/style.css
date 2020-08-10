@@ -260,13 +260,9 @@ form.form-login input.is-invalid {
 form.form-register input.is-invalid {
   border: solid 1px red;
 }
-/*formulario de registro de producto*/
-/*  
-.body {
-    margin: auto;
-    justify-content: center;
 
-  }*/
+
+/*formulario de registro de producto*/
 
   h2.tit {
     text-align: center;
@@ -340,6 +336,15 @@ form.form-register input.is-invalid {
       width: 150px;
       height: 30px;
   }
+
+/*formulario de EDICIÓN de producto*/
+
+label {
+  margin: 0px;
+}
+
+div.form-edit-nombre {
+}
 
     /*style carrito de productos */
 
